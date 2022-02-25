@@ -1,21 +1,15 @@
 import logo from "../logo.svg";
 import "../App.css";
-import Comment from "../components/Comment";
 import PostList from '../components/PostList'
 import {getAllKinds} from '../services'
 import React, { useState, useEffect } from 'react';
-function App() {
 
+function Home() {
 
     const [comments, setComments]=useState()
 useEffect(()=>{
     getAllKinds("comments").then(data=>setComments(data))
 },[])
-
-
- 
-
-  
 
   return (
     <div className="App">
@@ -25,10 +19,9 @@ useEffect(()=>{
       </header>
       <div className="App-body">
        <PostList/>
-
       </div>
     </div>
   );
 }
 
-export default App;
+export default Home;

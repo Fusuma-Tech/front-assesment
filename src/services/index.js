@@ -18,6 +18,7 @@ API_URL was wrong. Initially was "http://localhost:3000"
 I should be able to make dinamic functions to reduce the code when fetching posts.
 
 Also i could use the Header as a Navbar
+Date when posting?
 
-At the beggining, further the nom run serve, i had to install this npm install --save react react-dom react-scripts
+At the beggining, further the npm run serve, i had to install this npm install --save react react-dom react-scripts
 */
