@@ -1,0 +1,23 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "name": "Good project ideas",
+      "user": "Fran"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "postId": 1,
+      "user": "Fran",
+      "text": "Flying car"
+    },
+    {
+      "id": 2,
+      "postId": 1,
+      "user": "Fran",
+      "text": "Magic Carpet"
+    }
+  ]
+}

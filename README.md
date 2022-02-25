@@ -1,70 +1,37 @@
-# Getting Started with Create React App
+# Frontend Assesment - Fusuma
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This repository is designed to evaluate developer basic skills using React.js
 
-## Available Scripts
+## Background
 
-In the project directory, you can run:
+This app is created using `create-react-app`. It uses simple CSS styling following the templates recommendations. In this project a Post / Comments app needs to be implemented that allows:
 
-### `npm start`
+1. List all the Posts in the Database
+2. Navigate to the view of a post (Popup or new route)
+3. Add a comment to a Post
+4. Create a new Post
+5. Delete a Post
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## How to submit ?
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+In order to submit your solution create a Fork and create a Pull Request. Feel free to add comments to your request.
+### Considerations
 
-### `npm test`
+* Backend server is mocked using `json-server`. A script is added in `package.json`. Run `npm run serve` to start the server at `http://localhost:3001`.
+* No user data or authentication is required, users are identified by username to keep the project simple.
+* Developers are free to use whatever framework or solution you feel confortable with.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Recomendations
+* To show the detail view of the Posts use a simple React Router implementation or Popup.
+* Take care in being consistant with your code: Name conventions, scafolding, orderings.
+* Global state management is not required for the minimum requirements. Feel free to introduce Redux or Context but focus in meeting the requirements.
 
-### `npm run build`
+## Extra
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+As an extra challenge, you can focus on the Data access layer of the project. If you followed the scafolding proposed at the beggining, both `services/comments.js`and `services/posts.js` must be very similar. Take some time in refactoring how the application access the db in a way that you repeat as less code as possible and its easy to add services for new endpoints.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Final Thoughts
 
-### `npm run eject`
+Feel free to contact us at `fran@fusuma.io` or `adrian@fusuma.io` for information. Good luck and happy coding!
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
