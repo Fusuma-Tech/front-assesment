@@ -6,8 +6,8 @@ export const getCommentById = async (id) => {
   return data;
 };
 
-export const getAllComments = async () => {
-  const response = await fetch(`${API_URL}/comments`);
+export const getAllKinds = async (type) => {
+  const response = await fetch(`${API_URL}/${type}`);
   const data = await response.json();
   return data;
 }

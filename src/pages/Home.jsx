@@ -1,17 +1,20 @@
 import logo from "../logo.svg";
 import "../App.css";
 import Comment from "../components/Comment";
-import Post from '../components/Post'
-import {getAllComments} from '../services/comments'
+import PostList from '../components/PostList'
+import {getAllKinds} from '../services'
 import React, { useState, useEffect } from 'react';
 function App() {
 
-const [commentFetch, setCommentFetch] = useState(getAllComments())
 
-  useEffect(() => {
-    setCommentFetch(getAllComments())
-    console.log(commentFetch)
-  }, [])
+    const [comments, setComments]=useState()
+useEffect(()=>{
+    getAllKinds("comments").then(data=>setComments(data))
+},[])
+
+
+ 
+
   
 
   return (
@@ -21,10 +24,8 @@ const [commentFetch, setCommentFetch] = useState(getAllComments())
         <p>Frontend Assesment - Fusuma</p>
       </header>
       <div className="App-body">
-        Hello there
-        <Post />
-        <Comment />
-        <Comment />
+       <PostList/>
+
       </div>
     </div>
   );
