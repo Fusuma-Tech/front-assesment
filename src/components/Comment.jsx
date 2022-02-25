@@ -1,9 +1,9 @@
-import "./Comment.css";
+import "../styles/Comment.css";
 
 const Comment = () => {
   return (
-    <div className="Comment-container">
-      <div className="Comment-name">Name</div>
+    <div className="comment-container">
+      <div className="comment-name">Comment</div>
       <div>User name</div>
     </div>
   );
