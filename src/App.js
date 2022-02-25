@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import Comment from "./components/Comment";
+import PostsList from "./components/PostsList";
 
 function App() {
   return (
@@ -12,7 +12,7 @@ function App() {
       </header>
       <body className="App-body">
         Hello there
-        <Comment />
+        <PostsList></PostsList>
       </body>
     </div>
   );

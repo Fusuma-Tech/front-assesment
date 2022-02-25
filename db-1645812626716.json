@@ -4,21 +4,6 @@
       "id": 1,
       "name": "Good project ideas",
       "user": "Fran"
-    },
-    {
-      "id": 2,
-      "name": "Este es el post2",
-      "user": "Ana"
-    },
-    {
-      "id": 3,
-      "name": "Este es el post3",
-      "user": "Francisca"
-    },
-    {
-      "id": 4,
-      "name": "Este es el post4",
-      "user": "Kiketas"
     }
   ],
   "comments": [
