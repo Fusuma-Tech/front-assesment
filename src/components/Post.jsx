@@ -6,13 +6,14 @@ function Post({ post }) {
 
 
   return (
-    <div className="Comment-container">
-      <div className="Comment-name">New Post</div>
-      <div>{post.name}</div>
-      <div>{post.id}</div>
 
-      <Link to={`/posts/${post.id}`}></Link>
-    </div>
+    <Link to={`/post/${post.id}`}>
+      <div className="Comment-container">
+        <div className="Comment-name">{post.name}</div>
+        <div>{post.user}</div>
+      </div>
+    </Link >
+
   );
 };
 

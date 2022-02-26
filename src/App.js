@@ -7,22 +7,18 @@ import PostDetail from './components/PostDetail';
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Frontend Assesment - Fusuma</p>
-        </header>
-        <body className="App-body">
-          Hello there
-          <PostsList></PostsList>
-        </body>
-      </div>
-      <Routes>
-          <Route exact path="/posts" element={<PostsList/>} />
-          <Route exact path="/posts/:id" element={<PostDetail/>} />
+    <div className="App">
+      <header className="App-header">
+        <img src={logo} className="App-logo" alt="logo" />
+        <p>Frontend Assesment - Fusuma</p>
+      </header>
+      <Router>
+        <Routes>
+          <Route exact path="/" element={<PostsList />} />
+          <Route exact path="/post/:id" element={<PostDetail />} />
         </Routes>
-    </Router>
+      </Router>
+    </div>
 
   );
 }

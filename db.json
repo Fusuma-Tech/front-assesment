@@ -33,6 +33,18 @@
       "postId": 1,
       "user": "Fran",
       "text": "Magic Carpet"
+    },
+    {
+      "id": 3,
+      "postId": 2,
+      "user": "aa",
+      "text": "un comentario más"
+    },
+    {
+      "id": 4,
+      "postId": 3,
+      "user": "bb",
+      "text": "otro comentario"
     }
   ]
 }

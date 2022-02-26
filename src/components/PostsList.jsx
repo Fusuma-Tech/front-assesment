@@ -20,10 +20,6 @@ function PostsList() {
 
             let posts = await getAllPosts();
 
-            console.log(posts)
-
-
-
             if (!isUnmounted) {
                 setState({
                     posts: posts,
@@ -50,7 +46,7 @@ function PostsList() {
             <h2>PostsList</h2>
             <div>
                 {posts.map(post => (
-                    <div>
+                    <div key={post.id} >
                         <Post post={post}></Post></div>
                 ))}
             </div>
