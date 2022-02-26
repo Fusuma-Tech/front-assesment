@@ -22,7 +22,7 @@ const Comment = ({ postId }) => {
 
   return (
     <div className="whole-comment-container">
-     {openCommentPopup&& <AddCommentPopup postId={postId}/>}
+     {openCommentPopup&& <AddCommentPopup postId={postId} trigger={handleCommentPopup}/>}
       {
         comments &&
         comments.map(comment => comment.postId == postId &&

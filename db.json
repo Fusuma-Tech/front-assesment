@@ -31,43 +31,50 @@
       "text": "Hardcoded comment for testing"
     },
     {
-      "user": "a",
-      "commentContent": "a",
+      "postId": 1,
+      "user": "iñaki",
+      "text": "hola soy iñaki",
       "id": 4
     },
     {
-      "user": "a",
-      "commentContent": "a",
+      "postId": 1,
+      "text": "asasasdasd",
+      "user": "sdasd",
       "id": 5
     },
     {
-      "user": "a",
-      "commentContent": "a",
+      "postId": 1,
+      "text": "sdsd",
+      "user": "sdsd",
       "id": 6
     },
     {
-      "user": "a",
-      "commentContent": "aasdassasdasdasdasd",
+      "postId": 1,
+      "text": "sdasdasd",
       "id": 7
     },
     {
-      "user": "hola",
-      "commentContent": "whaaat",
+      "postId": 1,
+      "text": "sdasdasd",
+      "user": "sdsd",
       "id": 8
     },
     {
-      "user": "hola",
-      "commentContent": "whaaat",
+      "postId": 1,
+      "text": "aaaaaaa",
+      "user": "aaaaaaaaa",
       "id": 9
     },
     {
-      "user": "hola",
-      "commentContent": "whaaat",
+      "postId": 1,
+      "user": "qqqqqqqq",
+      "text": "qqqqqqqqqqqqqq",
       "id": 10
     },
     {
-      "user": "hola",
-      "commentContent": "whaaat",
+      "postId": 1,
+      "user": "s",
+      "text": "3333",
       "id": 11
     }
   ]
