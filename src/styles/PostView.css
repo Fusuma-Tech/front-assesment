@@ -1,0 +1,8 @@
+.post_view_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.post_view_container ul{
+    list-style-type: none; 
+}

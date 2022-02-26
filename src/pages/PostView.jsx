@@ -1,17 +1,28 @@
-import {getAllKinds} from '../services'
 import React, { useState, useEffect } from 'react';
+import { useParams } from "react-router-dom";
+import { getAllKindsById } from '../services';
+import '../styles/PostView.css'
+import Comment from '../components/Comment';
 
-export const PostView=()=>{
+export const PostView = () => {
 
+    const { id } = useParams();
 
-    //useParams y :id
-    const [posts, setPosts] = useState()
+    const [post, setPost] = useState()
     useEffect(() => {
-      getAllKinds("posts").then(data => setPosts(data))
+        getAllKindsById("posts", id).then(data => setPost(data))
     }, [])
 
-    return(
 
-        <div></div>
+    return (
+        <div className="post_view_container">
+            {post &&
+                <ul>
+                    <li> Post Name : {post.name}</li>
+                    <li>User : {post.name}</li>     
+                </ul>
+                }
+                <Comment/>  
+        </div>
     )
 }
