@@ -25,25 +25,25 @@
     {
       "id": 1,
       "postId": 1,
-      "user": "Fran",
+      "signed": "Fran",
       "text": "Flying car"
     },
     {
       "id": 2,
       "postId": 1,
-      "user": "Fran",
+      "signed": "Fran",
       "text": "Magic Carpet"
     },
     {
       "id": 3,
       "postId": 2,
-      "user": "aa",
+      "signed": "aa",
       "text": "un comentario más"
     },
     {
       "id": 4,
       "postId": 3,
-      "user": "bb",
+      "signed": "bb",
       "text": "otro comentario"
     }
   ]

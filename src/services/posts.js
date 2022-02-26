@@ -3,6 +3,6 @@
 import http from './base-api-service';
 const API_URL = "http://localhost:3000";
 
-export const getAllPosts = (posts) => http.get('/posts')
+export const getAllPosts = () => http.get('/posts')
 
 export const getPostById = (id) => http.get(`/posts/${id}`)

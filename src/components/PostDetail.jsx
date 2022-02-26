@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
 import { getPostById } from '../services/posts'
 import { getAllComments } from '../services/comments'
+import Comment from "./Comment";
+
 
 
 import "./Comment.css";
@@ -55,18 +57,20 @@ function PostDetail() {
       text: '',
       signed: ''
     },
-    comments: {
+    newCommentDone: {
       idPost: '',
       text: '',
       signed: ''
-    }
+    },
+    comments: []
   });
 
   useEffect(() => {
     async function fetchPost() {
       console.log('Fetching post...');
       let post = await getPostById(id);
-
+      console.log('Fetching comments...');
+      let comments = await getAllComments();
 
       if (!isUnmounted) {
         setState({
@@ -74,11 +78,13 @@ function PostDetail() {
           post: {
             name: post.name,
             user: post.user
-          }
+          },
+          comments: comments
         })
 
       }
     }
+
     let isUnmounted = false;
 
     fetchPost();
@@ -89,14 +95,9 @@ function PostDetail() {
   }, []);
 
   const handleChange = (newComment) => {
-    console.log(state)
 
     const { name, value } = newComment.target
-
     setState(state => {
-
-      console.log(state)
-      console.log(newComment.target)
 
       return {
         ...state,
@@ -110,7 +111,7 @@ function PostDetail() {
   }
 
   const handleClick = () => {
-    const comment = state.newComment;
+    const newCommentDone = state.newComment;
     setState(state => {
 
       return {
@@ -121,15 +122,15 @@ function PostDetail() {
           text: '',
           signed: ''
         },
-        comments: {
-          idPost: comment.idPost,
-          text: comment.text,
-          signed: comment.signed
-        }
+        newCommentDone: {
+          idPost: newCommentDone.idPost,
+          text: newCommentDone.text,
+          signed: newCommentDone.signed
+        },
+        comments: [newCommentDone, ...state.comments]
       }
     });
   }
-
   const { post, newComment, comments } = state;
 
   return (
@@ -143,9 +144,14 @@ function PostDetail() {
       </div>
       <button onClick={handleClick} value="Comentar">Comment</button>
 
+
+
+      <h2>Comments of post</h2>
       <div>
-        <div className="Comment-name">{comments.text}</div>
-        <div>{comments.signed}</div>
+        {comments.map(comment => (
+          <div key={comment.id} >
+            <Comment comment={comment}></Comment></div>
+        ))}
       </div>
 
 
