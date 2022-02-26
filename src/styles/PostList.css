@@ -1,19 +1,19 @@
 .post-container {
-    display: flex;
-    flex-flow: row nowrap;
-    border-radius: 1rem;
-    background-color: #425a7e;
-    padding: 2rem 1rem;
-    margin: 1rem;
-  }
-  
-  .post-name {
-    font-size: 1.5rem;
-    font-weight: bold;
-    margin-right: 1rem;
-  }
-  
-  .postLink{
-    text-decoration:none;
-    color:black;
-  }
+  display: flex;
+  flex-flow: row nowrap;
+  border-radius: 1rem;
+  background-color: #425a7e;
+  padding: 2rem 1rem;
+  margin: 1rem;
+}
+
+.post-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.postLink {
+  text-decoration: none;
+  color: black;
+}

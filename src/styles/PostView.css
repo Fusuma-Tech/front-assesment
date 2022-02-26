@@ -1,8 +1,12 @@
 .post_view_container{
     display: flex;
     justify-content: center;
+    align-items: center;
     flex-direction: column;
-}
-.post_view_container ul{
     list-style-type: none; 
+    border-radius: 1rem;
+    background-color:beige;
+    padding: 2rem 1rem;
+    margin: 1rem;
+    min-height: 12rem;
 }

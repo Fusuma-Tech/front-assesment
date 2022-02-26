@@ -23,6 +23,12 @@
       "postId": 1,
       "user": "Fran",
       "text": "Magic Carpet"
+    },
+    {
+      "id": 3,
+      "postId": 2,
+      "user": "Iñaki",
+      "text": "Hardcoded comment for testing"
     }
   ]
 }

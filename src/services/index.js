@@ -1,6 +1,6 @@
 // todo: create service methods for accesing posts
 const API_URL = "http://localhost:3001";
-export const getAllKindsById = async (type,id) => {
+export const getAllKindsById = async (type, id) => {
   const response = await fetch(`${API_URL}/${type}/${id}`);
   const data = await response.json();
   return data;
@@ -10,6 +10,18 @@ export const getAllKinds = async (type) => {
   const response = await fetch(`${API_URL}/${type}`);
   const data = await response.json();
   return data;
+}
+
+export const postAllKinds = (type, content)=>{
+fetch(`${API_URL}/${type}`,{
+method:'POST',
+headers:'Content-Type: application/json',
+body:JSON.stringify(content)
+})
+
+
+
+
 }
 
 /*Developer notes.
