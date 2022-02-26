@@ -7,7 +7,15 @@ function PostsList() {
 
     /*El state de este componente será únicamente los posts*/
     const [state, setState] = useState({
-        posts: []
+        posts: [],
+        newPost: {
+            name:'',
+            user: ''
+        },
+        newPostDone: {
+            name:'',
+            user: ''
+        }
     });
 
 
@@ -44,11 +52,42 @@ function PostsList() {
         }))
 
     }
+    const handleChange = (newPost) => {
 
+        const { name, value } = newPost.target
+        setState(state => {
+    
+          return {
+            ...state,
+            newPost: {
+              ...state.newPost,
+              [name]: value
+            }
+          }
+        });
+      }
+    
+    const handleClick = () => {
+        const newPostDone = state.newPost;
+        setState(state => {
 
-    const { posts } = state
+            return {
+                ...state,
+                newPost: {
+                    name:'',
+                    user: ''
+                },
+                newPostDone: {
+                    name: newPostDone.name,
+                    user: newPostDone.user
+                },
+                posts: [newPostDone, ...state.posts]
+            }
+        });
 
+    }
 
+    const { posts, newPost } = state
 
     return (
 
@@ -60,7 +99,20 @@ function PostsList() {
                         <Post post={post} onDeletePost={handleDeletePost}></Post></div>
                 ))}
             </div>
+
+            <h2>New Post</h2>
+            <div className="input-group mb-2">
+                <span className="input-group-text  bg-white border-warning text-warning"><i className="fa fa-edit fa-fw"></i></span>
+                <textarea name="name" placeholder="post..." onChange={handleChange}></textarea>
+                <textarea name="user" placeholder="user..." onChange={handleChange}></textarea>
+                <button onClick={handleClick} value="Comentar">Add post</button>
+
+            </div>
+
         </div>
+
+
+
     )
 
 }
