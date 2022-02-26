@@ -1,4 +1,4 @@
-import "./Comment.css";
+import "../Comment.css";
 
 const Comment = ({comment}) => {
   return (

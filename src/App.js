@@ -2,8 +2,8 @@ import { Route, BrowserRouter as Router, Routes, Redirect } from 'react-router-d
 import logo from "./logo.svg";
 import "./App.css";
 
-import PostsList from "./components/PostsList";
-import PostDetail from './components/PostDetail';
+import PostsList from "./components/posts/PostsList";
+import PostDetail from './components/posts/PostDetail';
 
 function App() {
   return (

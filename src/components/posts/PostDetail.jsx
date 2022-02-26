@@ -1,47 +1,11 @@
 import { useState, useEffect } from 'react';
 import { useParams } from 'react-router';
-import { getPostById } from '../services/posts'
-import { getAllComments } from '../services/comments'
-import Comment from "./Comment";
-
-
-
-import "./Comment.css";
+import { getPostById } from '../../services/posts'
+import { getAllComments } from '../../services/comments'
+import Comment from "../comments/Comment"
+import "../Comment.css";
 
 function PostDetail() {
-  // const params = useParams();
-
-
-  // const [post, setState] = useState({});
-
-  // useEffect(() => {
-  //   async function fetchPost() {
-  //     const { id } = params;
-  //     console.log('Fetching post...');
-  //     let post = await getPostById(id);
-
-
-  //     if (!isUnmounted) {
-  //       setState({
-  //         ...post,
-  //         name: post.name,
-  //         user: post.user
-
-  //       })
-
-  //     }
-  //   }
-  //   let isUnmounted = false;
-
-  //   fetchPost();
-  //   console.log("despues fetch")
-  //   console.log(new Date())
-
-  //   return () => {
-  //     isUnmounted = true;
-  //   }
-  // }, []);
-  // const { user, name } = post;
 
   const params = useParams();
   const { id } = params;
@@ -70,7 +34,9 @@ function PostDetail() {
       console.log('Fetching post...');
       let post = await getPostById(id);
       console.log('Fetching comments...');
-      let comments = await getAllComments();
+      let allComments = await getAllComments();
+      let comments = allComments.filter(comment => (comment.postId === parseInt(id)))
+
 
       if (!isUnmounted) {
         setState({
@@ -111,25 +77,27 @@ function PostDetail() {
   }
 
   const handleClick = () => {
-    const newCommentDone = state.newComment;
-    setState(state => {
+    console.log(state.newComment)
+      const newCommentDone = state.newComment;
+      setState(state => {
 
-      return {
-        ...state,
-        newComment: {
-          ...state.newComment,
-          idPost: '',
-          text: '',
-          signed: ''
-        },
-        newCommentDone: {
-          idPost: newCommentDone.idPost,
-          text: newCommentDone.text,
-          signed: newCommentDone.signed
-        },
-        comments: [newCommentDone, ...state.comments]
-      }
-    });
+        return {
+          ...state,
+          newComment: {
+            ...state.newComment,
+            idPost: '',
+            text: '',
+            signed: ''
+          },
+          newCommentDone: {
+            idPost: newCommentDone.idPost,
+            text: newCommentDone.text,
+            signed: newCommentDone.signed
+          },
+          comments: [newCommentDone, ...state.comments]
+        }
+      });
+
   }
   const { post, newComment, comments } = state;
 
@@ -141,20 +109,23 @@ function PostDetail() {
         <span className="input-group-text  bg-white border-warning text-warning"><i className="fa fa-edit fa-fw"></i></span>
         <textarea name="text" placeholder="comment..." value={newComment.text} onChange={handleChange}></textarea>
         <textarea name="signed" placeholder="signed..." value={newComment.signed} onChange={handleChange}></textarea>
+        <button onClick={handleClick} value="Comentar">Comment</button>
+
       </div>
-      <button onClick={handleClick} value="Comentar">Comment</button>
 
-
-
-      <h2>Comments of post</h2>
       <div>
-        {comments.map(comment => (
-          <div key={comment.id} >
-            <Comment comment={comment}></Comment></div>
-        ))}
+        {!comments && (
+
+          <h2>Comments of post</h2>
+        )}
+        <div>
+          {comments.map(comment => (
+            <div key={comment.id} >
+              <Comment comment={comment}></Comment></div>
+          ))}
+
+        </div>
       </div>
-
-
       <a href="/" className="btn btn-secondary m-3 my-sm-0">Atrás</a>
     </div>
 

@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react';
 import Post from "./Post";
-import { getAllPosts } from '../services/posts';
+import { getAllPosts } from '../../services/posts';
 
 
 function PostsList() {
 
+    /*El state de este componente será únicamente los posts*/
     const [state, setState] = useState({
         posts: []
     });
@@ -16,7 +17,6 @@ function PostsList() {
             setState(state => ({
                 ...state,
             }))
-
 
             let posts = await getAllPosts();
 
@@ -36,6 +36,16 @@ function PostsList() {
         }
     }, []);
 
+    /*Controlador para borrar disparado por el child Post e identificado por su id*/
+    const handleDeletePost = id => {
+        setState(state => ({
+            ...state,
+            posts: posts.filter(post => (post.id != id))
+        }))
+
+    }
+
+
     const { posts } = state
 
 
@@ -47,7 +57,7 @@ function PostsList() {
             <div>
                 {posts.map(post => (
                     <div key={post.id} >
-                        <Post post={post}></Post></div>
+                        <Post post={post} onDeletePost={handleDeletePost}></Post></div>
                 ))}
             </div>
         </div>
