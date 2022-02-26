@@ -5,6 +5,7 @@ const Comment = () => {
     <div className="Comment-container">
       <div className="Comment-name">Name</div>
       <div>User name</div>
+      <div>Texto</div>
     </div>
   );
 };
