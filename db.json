@@ -29,6 +29,46 @@
       "postId": 2,
       "user": "Iñaki",
       "text": "Hardcoded comment for testing"
+    },
+    {
+      "user": "a",
+      "commentContent": "a",
+      "id": 4
+    },
+    {
+      "user": "a",
+      "commentContent": "a",
+      "id": 5
+    },
+    {
+      "user": "a",
+      "commentContent": "a",
+      "id": 6
+    },
+    {
+      "user": "a",
+      "commentContent": "aasdassasdasdasdasd",
+      "id": 7
+    },
+    {
+      "user": "hola",
+      "commentContent": "whaaat",
+      "id": 8
+    },
+    {
+      "user": "hola",
+      "commentContent": "whaaat",
+      "id": 9
+    },
+    {
+      "user": "hola",
+      "commentContent": "whaaat",
+      "id": 10
+    },
+    {
+      "user": "hola",
+      "commentContent": "whaaat",
+      "id": 11
     }
   ]
 }

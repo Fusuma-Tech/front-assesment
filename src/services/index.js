@@ -15,9 +15,11 @@ export const getAllKinds = async (type) => {
 export const postAllKinds = (type, content)=>{
 fetch(`${API_URL}/${type}`,{
 method:'POST',
-headers:'Content-Type: application/json',
+headers:{
+  "Content-Type": "application/json"
+},
 body:JSON.stringify(content)
-})
+}).then(console.log("done"))
 
 
 

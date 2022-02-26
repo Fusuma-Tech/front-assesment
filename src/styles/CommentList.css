@@ -1,3 +1,9 @@
+.whole-comment-container {
+  margin: 1rem;
+
+}
+
+
 .comment-container {
   display: flex;
   flex-flow: row nowrap;
@@ -11,4 +17,18 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 1rem;
+}
+
+.addCommentButton {
+  margin-left: 1rem;
+  background-color: #4CAF50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
 }
