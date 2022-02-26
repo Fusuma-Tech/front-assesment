@@ -9,6 +9,26 @@
       "id": 2,
       "name": "Example hardcoded post ",
       "user": "Iñaki"
+    },
+    {
+      "user": "iña",
+      "name": "postito",
+      "id": 3
+    },
+    {
+      "user": "a",
+      "name": "a",
+      "id": 4
+    },
+    {
+      "user": "ultimo post",
+      "name": "iña",
+      "id": 5
+    },
+    {
+      "user": "ultimo posta",
+      "name": "iña\n\n",
+      "id": 6
     }
   ],
   "comments": [
@@ -25,57 +45,76 @@
       "text": "Magic Carpet"
     },
     {
-      "id": 3,
       "postId": 2,
-      "user": "Iñaki",
-      "text": "Hardcoded comment for testing"
+      "user": "iña",
+      "text": "first comment",
+      "id": 3
     },
     {
-      "postId": 1,
-      "user": "iñaki",
-      "text": "hola soy iñaki",
+      "postId": 2,
+      "user": "first commebt",
+      "text": "s",
       "id": 4
     },
     {
-      "postId": 1,
-      "text": "asasasdasd",
-      "user": "sdasd",
+      "postId": 2,
+      "user": "ss",
+      "text": "ss",
       "id": 5
     },
     {
-      "postId": 1,
+      "postId": 2,
+      "user": "sdasdas",
       "text": "sdsd",
-      "user": "sdsd",
       "id": 6
     },
     {
-      "postId": 1,
-      "text": "sdasdasd",
+      "postId": 2,
+      "user": "s",
+      "text": "s",
       "id": 7
     },
     {
-      "postId": 1,
-      "text": "sdasdasd",
-      "user": "sdsd",
+      "postId": 2,
+      "user": "asdasd",
+      "text": "a",
       "id": 8
     },
     {
-      "postId": 1,
-      "text": "aaaaaaa",
-      "user": "aaaaaaaaa",
+      "postId": 2,
+      "user": "qq",
+      "text": "qqq",
       "id": 9
     },
     {
-      "postId": 1,
-      "user": "qqqqqqqq",
-      "text": "qqqqqqqqqqqqqq",
+      "postId": 2,
+      "user": "aa",
+      "text": "aa",
       "id": 10
     },
     {
-      "postId": 1,
-      "user": "s",
-      "text": "3333",
+      "postId": 2,
+      "text": "xx",
+      "user": "xx",
       "id": 11
+    },
+    {
+      "postId": 2,
+      "user": "qq",
+      "text": "qq",
+      "id": 12
+    },
+    {
+      "postId": 4,
+      "user": "a",
+      "text": "a",
+      "id": 13
+    },
+    {
+      "postId": 4,
+      "user": "aa",
+      "text": "aa",
+      "id": 14
     }
   ]
 }

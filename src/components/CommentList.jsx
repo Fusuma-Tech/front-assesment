@@ -5,24 +5,21 @@ import { AddCommentPopup } from "./AddCommentPopup";
 
 const Comment = ({ postId }) => {
   const [comments, setComments] = useState()
+  const [openCommentPopup, setOpenCommentPopup] = useState(false)
 
+  const handleCommentPopup = () => {
+    setOpenCommentPopup(openCommentPopup => !openCommentPopup)
+  }
   useEffect(() => {
     getAllKinds("comments").then(data =>
       setComments(data))
-  }, [])
-
-  const [openCommentPopup, setOpenCommentPopup]=useState(false)
-
-  const handleCommentPopup =()=>{
-    setOpenCommentPopup(openCommentPopup=>!openCommentPopup)
-  }
-
+  },[openCommentPopup])
 
   
 
   return (
     <div className="whole-comment-container">
-     {openCommentPopup&& <AddCommentPopup postId={postId} trigger={handleCommentPopup}/>}
+      {openCommentPopup && <AddCommentPopup postId={postId} trigger={handleCommentPopup} />}
       {
         comments &&
         comments.map(comment => comment.postId == postId &&
