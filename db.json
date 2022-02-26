@@ -1,120 +1,27 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "Good project ideas",
-      "user": "Fran"
+      "user": "iñaki",
+      "name": "First Post",
+      "id": 1
     },
     {
-      "id": 2,
-      "name": "Example hardcoded post ",
-      "user": "Iñaki"
+      "user": "Iña",
+      "name": "Second Post",
+      "id": 2
     },
     {
-      "user": "iña",
-      "name": "postito",
+      "user": "Iña",
+      "name": "Third Post",
       "id": 3
-    },
-    {
-      "user": "a",
-      "name": "a",
-      "id": 4
-    },
-    {
-      "user": "ultimo post",
-      "name": "iña",
-      "id": 5
-    },
-    {
-      "user": "ultimo posta",
-      "name": "iña\n\n",
-      "id": 6
     }
   ],
   "comments": [
     {
-      "id": 1,
       "postId": 1,
-      "user": "Fran",
-      "text": "Flying car"
-    },
-    {
-      "id": 2,
-      "postId": 1,
-      "user": "Fran",
-      "text": "Magic Carpet"
-    },
-    {
-      "postId": 2,
       "user": "iña",
-      "text": "first comment",
-      "id": 3
-    },
-    {
-      "postId": 2,
-      "user": "first commebt",
-      "text": "s",
-      "id": 4
-    },
-    {
-      "postId": 2,
-      "user": "ss",
-      "text": "ss",
-      "id": 5
-    },
-    {
-      "postId": 2,
-      "user": "sdasdas",
-      "text": "sdsd",
-      "id": 6
-    },
-    {
-      "postId": 2,
-      "user": "s",
-      "text": "s",
-      "id": 7
-    },
-    {
-      "postId": 2,
-      "user": "asdasd",
-      "text": "a",
-      "id": 8
-    },
-    {
-      "postId": 2,
-      "user": "qq",
-      "text": "qqq",
-      "id": 9
-    },
-    {
-      "postId": 2,
-      "user": "aa",
-      "text": "aa",
-      "id": 10
-    },
-    {
-      "postId": 2,
-      "text": "xx",
-      "user": "xx",
-      "id": 11
-    },
-    {
-      "postId": 2,
-      "user": "qq",
-      "text": "qq",
-      "id": 12
-    },
-    {
-      "postId": 4,
-      "user": "a",
-      "text": "a",
-      "id": 13
-    },
-    {
-      "postId": 4,
-      "user": "aa",
-      "text": "aa",
-      "id": 14
+      "text": "first commein first postnt ",
+      "id": 1
     }
   ]
 }

@@ -5,7 +5,6 @@ import { postAllKinds } from '../services';
 export const AddCommentPopup = ({ postId, trigger }) => {
 
     const [comment, setComment] = useState({ postId: postId })
-    const [saveComment, setSaveComment] = useState()
 
     const handleCommentInput = (e) => {
         setComment({

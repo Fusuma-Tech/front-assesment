@@ -10,12 +10,11 @@ const Comment = ({ postId }) => {
   const handleCommentPopup = () => {
     setOpenCommentPopup(openCommentPopup => !openCommentPopup)
   }
+
   useEffect(() => {
     getAllKinds("comments").then(data =>
       setComments(data))
-  },[openCommentPopup])
-
-  
+  },[openCommentPopup,setOpenCommentPopup])
 
   return (
     <div className="whole-comment-container">
@@ -26,8 +25,7 @@ const Comment = ({ postId }) => {
           <div key={comment.id} className="comment-container">
             <div className="comment-name">{comment.text}</div>
           </div>
-        )
-      }
+        )}
       <button onClick={handleCommentPopup} className="addCommentButton">Add Comment</button>
     </div>
   );

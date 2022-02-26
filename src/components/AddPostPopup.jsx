@@ -12,7 +12,7 @@ export const AddPostPopup = ({ trigger }) => {
         })
     }
     const addPost = (event) => {
-        post.name !== "" &&
+        post  &&
         postAllKinds("posts", post)
         trigger()
     }
@@ -22,7 +22,7 @@ export const AddPostPopup = ({ trigger }) => {
             <form className='addPostForm'>
                 <input onChange={e => handlePostInput(e)} type="text" name="user" placeholder="Your name.." required />
                 <textarea onChange={e => handlePostInput(e)} className='textarea' name="name" placeholder="Some text here.." required></textarea>
-                <input onClick={(event) => addPost(event)} type="button" value="Submit"></input>
+                <input onClick={(event) => addPost(event)} type="button" value="Submit" required></input>
             </form>
         </div>
     )

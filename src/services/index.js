@@ -20,11 +20,18 @@ headers:{
 },
 body:JSON.stringify(content)
 }).then(console.log("done"))
-
-
-
-
 }
+export const deleteData =async (type, id)=> {
+  return fetch(`${API_URL}/${type}/${id}`,{
+    method: 'delete'
+  })
+  .then(response => response.json());
+}
+
+
+
+
+
 
 /*Developer notes.
 API_URL was wrong. Initially was "http://localhost:3000"
