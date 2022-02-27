@@ -6,11 +6,14 @@ import PostList from '../PostList'
 import NewPost from '../NewPost'
 
 const Home = (props) => {
+  console.log(props)
   return (
-    <div className="postList">
+    <main>
     <NewPost/>
-    <PostList postInfo={props.postInfo}/>
+    <div className="postList">
+    <PostList postInfo={props.postInfo.postList}/>
     </div>
+    </main>
   );
 };
 
