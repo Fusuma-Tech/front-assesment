@@ -15,11 +15,10 @@ const Post = () => {
 
   useEffect(() => {
     getAllKinds("posts").then(data => setPosts(data))
-  }, [openPostPopup, setOpenPostPopup,deleteData])
+  }, [openPostPopup ])
 
   const deletePost = (e,id) => {
     e.preventDefault()
-    setPosts(currentPosts => currentPosts > 0 && currentPosts.filter(currentPosts !== currentPosts.id));
     deleteData("posts", id);
     getAllKinds("posts").then(data => setPosts(data))
   }
@@ -27,7 +26,7 @@ const Post = () => {
     <div>
       <button onClick={e => handlePostPopup(e)} className="addPostButton">+ Add Post</button>
       {openPostPopup && <AddPostPopup trigger={handlePostPopup} />}
-      {posts &&
+      {/* {posts && */
         posts.map(post =>
           <Link key={post.id} to={"/post/" + post.id} className="postLink" >
             <div className="post-container">
@@ -35,7 +34,7 @@ const Post = () => {
               <div>Posted by:{post.user}</div>
               <button onClick={(e) =>
                 deletePost(e,post.id)
-              }>delete</button>
+              }>X</button>
             </div>
           </Link>
         )}

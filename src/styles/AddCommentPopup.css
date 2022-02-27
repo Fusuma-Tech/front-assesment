@@ -8,14 +8,11 @@ flex-direction: column;
     display: flex;
     flex-direction: column;
     justify-content: end;
-    align-items:center ;
+    align-items:center;
 }
 .commentPopup input{
-
     width: 40%;
 }
-
-
 .addCommentForm button{
     height: 30px;
 }

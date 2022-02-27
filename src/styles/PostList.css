@@ -8,6 +8,10 @@
   align-items: center;
   justify-content: space-between;
 }
+.post-container :nth-child(3n){
+  background-color: red;
+  cursor: pointer;
+}
 
 .post-name {
   font-size: 1.5rem;

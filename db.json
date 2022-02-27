@@ -4,7 +4,31 @@
       "user": "Iñaki",
       "name": "First Post",
       "id": 1
+    },
+    {
+      "user": "Iñaki",
+      "name": "Second Comment",
+      "id": 2
     }
   ],
-  "comments": []
+  "comments": [
+    {
+      "postId": 1,
+      "user": "Iñaki",
+      "text": "First comment!",
+      "id": 1
+    },
+    {
+      "postId": 1,
+      "user": "Iñaki",
+      "text": "Second Comment",
+      "id": 2
+    },
+    {
+      "postId": 1,
+      "user": "Iñaki",
+      "text": "Last commentttt :)",
+      "id": 3
+    }
+  ]
 }

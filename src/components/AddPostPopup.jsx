@@ -11,9 +11,9 @@ export const AddPostPopup = ({ trigger }) => {
             [e.target.name]: e.target.value
         })
     }
-    const addPost = (event) => {
-        post  &&
-        postAllKinds("posts", post)
+    const addPost = () => {
+        post &&
+            postAllKinds("posts", post)
         trigger()
     }
 
