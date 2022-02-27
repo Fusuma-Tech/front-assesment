@@ -2,20 +2,23 @@
   margin: 1rem;
 
 }
-
-
 .comment-container {
   display: flex;
   flex-flow: row nowrap;
   border-radius: 1rem;
   background-color: #aaccff;
-  padding: 2rem 1rem;
+  padding:1rem;
   margin: 1rem;
+  flex-direction: column;
 }
 
 .comment-name {
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 1.2rem;
+  margin-right: 1rem;
+  margin:1rem;
+}
+.comment-user {
+  font-size: 1rem;
   margin-right: 1rem;
 }
 

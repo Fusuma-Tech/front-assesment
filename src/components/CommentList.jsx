@@ -14,19 +14,21 @@ const Comment = ({ postId }) => {
   useEffect(() => {
     getAllKinds("comments").then(data =>
       setComments(data))
-  },[openCommentPopup,setOpenCommentPopup])
+  }, [openCommentPopup, setOpenCommentPopup])
 
   return (
     <div className="whole-comment-container">
-      {openCommentPopup && <AddCommentPopup postId={postId} trigger={handleCommentPopup} />}
+      <h3>Comentarios</h3>
       {
         comments &&
         comments.map(comment => comment.postId == postId &&
           <div key={comment.id} className="comment-container">
+            <div className="comment-user">  by: {comment.user}</div>
             <div className="comment-name">{comment.text}</div>
           </div>
         )}
       <button onClick={handleCommentPopup} className="addCommentButton">Add Comment</button>
+      {openCommentPopup && <AddCommentPopup postId={postId} trigger={handleCommentPopup} />}
     </div>
   );
 };

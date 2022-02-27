@@ -15,11 +15,12 @@ export const PostView = () => {
     return (
         <div >
             {post &&
-                <div >
+                <div>
                     <div className="post_view_container">
                         <h2> Post Name : {post.name}</h2>
                         <h2>User : {post.user}</h2>
                     </div>
+                    
                     <CommentList postId={post.id} />
                 </div>
             }

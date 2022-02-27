@@ -23,10 +23,10 @@ export const AddCommentPopup = ({ postId, trigger }) => {
         <div className="commentPopup">
             <form className="addCommentForm"  >
                 <h5>User</h5>
-                <input onChange={e => handleCommentInput(e)} name='user' placeholder='User Name' type="text" className=" form-control" required />
+                <input onChange={e => handleCommentInput(e)} name='user' placeholder='User Name' type="text" required />
                 <h5>Comment</h5>
                 <input onChange={e => handleCommentInput(e)} className="textarea  form-control" name="text" required></input>
-                <button onClick={(event) => addComment(event)} type='submit'> Send Comment</button>
+                <button onClick={(event) => addComment(event)} type='button' value="Submit"> Send Comment</button>
             </form>
         </div>
     )

@@ -10,8 +10,12 @@ const Post = () => {
   const [openPostPopup, setOpenPostPopup] = useState(false)
 
   const handlePostPopup = (e) => {
-    setOpenPostPopup(!openPostPopup)
+    setOpenPostPopup(openPostPopup=>!openPostPopup)
   }
+
+  useEffect(() => {
+    getAllKinds("posts").then(data => setPosts(data))
+  }, [openPostPopup, setOpenPostPopup,deleteData])
 
   const deletePost = (e,id) => {
     e.preventDefault()
@@ -19,17 +23,12 @@ const Post = () => {
     deleteData("posts", id);
     getAllKinds("posts").then(data => setPosts(data))
   }
-  useEffect(() => {
-    getAllKinds("posts").then(data => setPosts(data))
-  }, [openPostPopup, setOpenPostPopup])
-
   return (
     <div>
       <button onClick={e => handlePostPopup(e)} className="addPostButton">+ Add Post</button>
       {openPostPopup && <AddPostPopup trigger={handlePostPopup} />}
       {posts &&
         posts.map(post =>
-
           <Link key={post.id} to={"/post/" + post.id} className="postLink" >
             <div className="post-container">
               <div className="post-name">{post.name}</div>
@@ -38,9 +37,7 @@ const Post = () => {
                 deletePost(e,post.id)
               }>delete</button>
             </div>
-
           </Link>
-
         )}
     </div>
   )

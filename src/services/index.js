@@ -21,6 +21,7 @@ headers:{
 body:JSON.stringify(content)
 }).then(console.log("done"))
 }
+
 export const deleteData =async (type, id)=> {
   return fetch(`${API_URL}/${type}/${id}`,{
     method: 'delete'

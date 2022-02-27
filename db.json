@@ -1,27 +1,10 @@
 {
   "posts": [
     {
-      "user": "iñaki",
+      "user": "Iñaki",
       "name": "First Post",
       "id": 1
-    },
-    {
-      "user": "Iña",
-      "name": "Second Post",
-      "id": 2
-    },
-    {
-      "user": "Iña",
-      "name": "Third Post",
-      "id": 3
     }
   ],
-  "comments": [
-    {
-      "postId": 1,
-      "user": "iña",
-      "text": "first commein first postnt ",
-      "id": 1
-    }
-  ]
+  "comments": []
 }

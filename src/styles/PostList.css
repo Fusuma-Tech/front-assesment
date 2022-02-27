@@ -5,6 +5,8 @@
   background-color: #425a7e;
   padding: 2rem 1rem;
   margin: 1rem;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .post-name {
