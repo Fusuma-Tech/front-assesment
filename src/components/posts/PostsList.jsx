@@ -1,3 +1,5 @@
+/* Este va a ser el component principal.*/
+
 import "../Post.css";
 
 import { useState, useEffect } from 'react';
@@ -7,7 +9,7 @@ import { getAllPosts } from '../../services/posts';
 
 function PostsList() {
 
-    /*El state de este componente será únicamente los posts*/
+    /*Iniciamos el estado: el array de posts, un objetos newPost auxiliar y otro newPostDone*/
     const [state, setState] = useState({
         posts: [],
         newPost: {
@@ -20,14 +22,14 @@ function PostsList() {
         }
     });
 
-
+    /*Recuperamos los posts del servidor, con una llamada asíncrona al servicio*/
     useEffect(() => {
         async function fetchPosts() {
             console.log('Fetching posts...');
             setState(state => ({
                 ...state,
             }))
-
+            /*Función asíncrona que recupera los datos de los posts llamando al servicio services/posts*/
             let posts = await getAllPosts();
 
             if (!isUnmounted) {
@@ -54,6 +56,7 @@ function PostsList() {
         }))
 
     }
+    /*Este controlador va refrescando el textarea del form que se está rellenando*/
     const handleChange = (newPost) => {
 
         const { name, value } = newPost.target
@@ -69,6 +72,7 @@ function PostsList() {
         });
     }
 
+    /*Añadimos el post al array de posts y seteamos el estado para que se actualice la cadena de posts.*/
     const handleClick = () => {
         const newPostDone = state.newPost;
         setState(state => {

@@ -1,7 +1,7 @@
+/* La web se va a comunicar entre las diferentes vistas con la ayuda de react-router-dom. Aquí se declara las rutas que va a tener la web.*/
 import { Route, BrowserRouter as Router, Routes, Redirect } from 'react-router-dom';
 import logo from "./logo.svg";
 import "./App.css";
-
 import PostsList from "./components/posts/PostsList";
 import PostDetail from './components/posts/PostDetail';
 
