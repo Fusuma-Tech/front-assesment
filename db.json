@@ -7,28 +7,44 @@
     },
     {
       "user": "Iñaki",
-      "name": "Second Comment",
+      "name": "Second Post",
       "id": 2
+    },
+    {
+      "user": "Iñaki",
+      "name": "Last Post",
+      "id": 3
+    },
+    {
+      "user": "Iñaki",
+      "name": "Ok, one more post",
+      "id": 4
     }
   ],
   "comments": [
     {
-      "postId": 1,
+      "postId": 2,
       "user": "Iñaki",
-      "text": "First comment!",
-      "id": 1
-    },
-    {
-      "postId": 1,
-      "user": "Iñaki",
-      "text": "Second Comment",
+      "text": "Nice Post!",
       "id": 2
     },
     {
       "postId": 1,
       "user": "Iñaki",
-      "text": "Last commentttt :)",
+      "text": "This must be the first post",
       "id": 3
+    },
+    {
+      "postId": 1,
+      "user": "Iñaki",
+      "text": "Woow nice post",
+      "id": 4
+    },
+    {
+      "postId": 3,
+      "user": "Iñaki",
+      "text": "This post deserves a comment ;)",
+      "id": 5
     }
   ]
 }

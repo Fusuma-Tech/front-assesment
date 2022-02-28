@@ -11,9 +11,12 @@ const Comment = ({ postId }) => {
     setOpenCommentPopup(openCommentPopup => !openCommentPopup)
   }
 
+  const getCommentsFromServer =()=>{ 
+    getAllKinds("comments").then(data => setComments(data))
+   }
+
   useEffect(() => {
-    getAllKinds("comments").then(data =>
-      setComments(data))
+    getCommentsFromServer()
   }, [openCommentPopup])
 
   return (
@@ -27,8 +30,8 @@ const Comment = ({ postId }) => {
             <div className="comment-name">{comment.text}</div>
           </div>
         )}
-      <button onClick={handleCommentPopup} className="addCommentButton">Add Comment</button>
-      {openCommentPopup && <AddCommentPopup postId={postId} trigger={handleCommentPopup} />}
+      <button onClick={()=>handleCommentPopup()} className="addCommentButton">Add Comment</button>
+      {openCommentPopup && <AddCommentPopup postId={postId} trigger={()=>handleCommentPopup()} />}
     </div>
   );
 };

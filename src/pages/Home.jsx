@@ -2,15 +2,8 @@ import logo from "../logo.svg";
 import post from "../img/post.jpg"
 import "../App.css";
 import PostList from '../components/PostList'
-import { getAllKinds } from '../services'
-import React, { useState, useEffect } from 'react';
 
 function Home() {
-
-  const [comments, setComments] = useState()
-  useEffect(() => {
-    getAllKinds("comments").then(data => setComments(data))
-  }, [])
 
   return (
     <div className="App">
