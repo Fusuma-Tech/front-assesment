@@ -43,3 +43,9 @@
   flex-flow: column nowrap;
   background-color: #f0f0f0;
 }
+
+.postHome{
+width: 10rem;
+height: 10rem;
+margin: auto;
+}
