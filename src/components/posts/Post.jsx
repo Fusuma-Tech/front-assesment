@@ -1,4 +1,4 @@
-import "../Comment.css";
+import "../Post.css";
 import { Link } from 'react-router-dom';
 
 
@@ -12,14 +12,15 @@ function Post({ post, onDeletePost }) {
 
   return (
 
-    <div className="Comment-container">
-      <Link to={`/post/${post.id}`}>
+    <div className="column">
+      <div className='card'>
+      <Link to={`/post/${post.id}`} style={{paddingLeft: "13px", textDecoration: 'none'}}>
 
-        <div className="Comment-name">{post.name}</div>
+        <h3>{post.name}</h3>
         <div>{post.user}</div>
       </Link >
-      <button onClick={() => handleDeletePost(post.id)} value="Comentar">Delete post</button>
-
+      <button  className='button' style={{backgroundColor:"#b1dee9"}}onClick={() => handleDeletePost(post.id)} value="Comentar">Delete post</button>
+      </div>
     </div>
 
 

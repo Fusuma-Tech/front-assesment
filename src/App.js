@@ -10,7 +10,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Frontend Assesment - Fusuma</p>
+        <p>Frontend Assesment - Fusuma  (by Ana Urrialde)</p>
       </header>
       <Router>
         <Routes>

@@ -1,3 +1,5 @@
+import "../Post.css";
+
 import { useState, useEffect } from 'react';
 import Post from "./Post";
 import { getAllPosts } from '../../services/posts';
@@ -9,11 +11,11 @@ function PostsList() {
     const [state, setState] = useState({
         posts: [],
         newPost: {
-            name:'',
+            name: '',
             user: ''
         },
         newPostDone: {
-            name:'',
+            name: '',
             user: ''
         }
     });
@@ -56,17 +58,17 @@ function PostsList() {
 
         const { name, value } = newPost.target
         setState(state => {
-    
-          return {
-            ...state,
-            newPost: {
-              ...state.newPost,
-              [name]: value
+
+            return {
+                ...state,
+                newPost: {
+                    ...state.newPost,
+                    [name]: value
+                }
             }
-          }
         });
-      }
-    
+    }
+
     const handleClick = () => {
         const newPostDone = state.newPost;
         setState(state => {
@@ -74,7 +76,7 @@ function PostsList() {
             return {
                 ...state,
                 newPost: {
-                    name:'',
+                    name: '',
                     user: ''
                 },
                 newPostDone: {
@@ -90,29 +92,30 @@ function PostsList() {
     const { posts, newPost } = state
 
     return (
-
         <div>
-            <h2>PostsList</h2>
-            <div>
+            <h2 className="title">Posts List</h2>
+            <div className='row'>
                 {posts.map(post => (
                     <div key={post.id} >
                         <Post post={post} onDeletePost={handleDeletePost}></Post></div>
                 ))}
             </div>
-
-            <h2>New Post</h2>
+            <h2 className="title">New Post</h2>
             <div className="input-group mb-2">
                 <span className="input-group-text  bg-white border-warning text-warning"><i className="fa fa-edit fa-fw"></i></span>
-                <textarea name="name" placeholder="post..." onChange={handleChange}></textarea>
-                <textarea name="user" placeholder="user..." onChange={handleChange}></textarea>
-                <button onClick={handleClick} value="Comentar">Add post</button>
+                <div className='row' >
+                    <div className='col-75' style={{ paddingRight: "15px" }}>
+                        <textarea name="name" placeholder="post..." onChange={handleChange}></textarea>
+                    </div>
 
+                    <div className='col-25'>
+                        <textarea name="user" placeholder="user..." onChange={handleChange}></textarea>
+                        <button className="button" onClick={handleClick} value="Comentar">Add post</button>
+
+                    </div>
+                </div>
             </div>
-
         </div>
-
-
-
     )
 
 }

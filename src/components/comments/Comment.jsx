@@ -1,11 +1,12 @@
 import "../Comment.css";
+import "../Post.css";
 
-const Comment = ({comment}) => {
+
+const Comment = ({ comment }) => {
   return (
-    <div className="Comment-container">
-      <div>Comentario:</div>
+    <div className="card">
+      <h2>{comment.signed}</h2>
       <div>{comment.text}</div>
-      <div>{comment.signed}</div>
     </div>
   );
 };
