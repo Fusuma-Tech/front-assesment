@@ -4,10 +4,11 @@ import  {PostView}  from '../src/pages/PostView';
 
 export default () => (
     <BrowserRouter>
-        <Routes>   
+        <Routes>
             <Route path="/" element={<Home/>}/>
             <Route path="/post/:id" element={<PostView/>}/>
             <Route path="*" element={<div>404</div> } />
         </Routes>
+      
     </BrowserRouter>
 );  

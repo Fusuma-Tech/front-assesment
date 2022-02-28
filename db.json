@@ -45,6 +45,18 @@
       "user": "Iñaki",
       "text": "This post deserves a comment ;)",
       "id": 5
+    },
+    {
+      "postId": 1,
+      "user": "Iñaki",
+      "text": "Best Post!",
+      "id": 7
+    },
+    {
+      "postId": 4,
+      "user": "Iñaki",
+      "text": "I am a comment! The Last comment!",
+      "id": 8
     }
   ]
 }

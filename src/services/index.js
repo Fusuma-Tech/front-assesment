@@ -27,15 +27,3 @@ export const deleteData =async (type, id)=> {
   })
   .then(response => response.json());
 }
-
-
-
-
-
-
-/*Developer notes.
-
-API_URL was wrong. Initially was "http://localhost:3000"
-
-At the beggining, further the npm run serve, i had to install this: npm install --save react react-dom react-scripts
-*/
