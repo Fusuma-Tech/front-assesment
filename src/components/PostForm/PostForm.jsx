@@ -22,7 +22,6 @@ const PostForm = (props) => {
 
   return (
     <div>
-    <Link to='/'>Home</Link>
     <form className="postForm" onSubmit={handleSubmit}>
       <input type='text' className="formTitle" placeholder="Write a title..." name='title'></input>
       <textarea className="formText" placeholder="Here comes your post..." name='text'></textarea>

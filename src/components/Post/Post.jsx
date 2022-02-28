@@ -4,6 +4,8 @@ import './Post.css'
 
 const Post = (props) => {
 
+  // console.log("esto es en post" + props)
+
   const infoPost = props.postInfo
 
 

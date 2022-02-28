@@ -3,6 +3,7 @@ import React, {useEffect, useState} from 'react'
 import {Routes, Route} from 'react-router-dom'
 import Home from '../Home'
 import PostForm from '../PostForm'
+import PostDetail from '../PostDetail/PostDetail'
 
 
 import {getAllPosts} from '../../services/posts.js'
@@ -33,6 +34,7 @@ const Main = () => {
     <Routes>
       <Route path='/' element={<Home postInfo={newPostInfo}/>}/>
       <Route path='/newPost' element={<PostForm newPostInfo={newPostInfo}/>}/>
+      <Route path='/post' element={<PostDetail postInfo={newPostInfo}/>}/>
     </Routes>      
   </main>
   );
