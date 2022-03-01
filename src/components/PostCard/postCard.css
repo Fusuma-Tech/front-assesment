@@ -1,0 +1,18 @@
+.PostCard {
+  width: 20vw;
+  height: 20vh;
+  display: flex;
+  flex-direction: row;
+  border-radius: 1rem;
+  background-color: #aaccff;
+  padding: 2rem 1rem;
+  margin: 1rem;
+}
+
+.PostCard a {
+  text-decoration: none;
+}
+.PostCard:hover {
+  transform: scale(1.05);
+}
+
