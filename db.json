@@ -43,6 +43,18 @@
       "postId": 2,
       "user": "AlejandroMartin",
       "text": "Nice post!"
+    },
+    {
+      "postId": "1",
+      "user": "ChristianCiudad",
+      "text": "Buena tio!",
+      "id": 4
+    },
+    {
+      "postId": "2",
+      "user": "ChristianCiudad",
+      "text": "Que bien salió eso!",
+      "id": 5
     }
   ]
 }

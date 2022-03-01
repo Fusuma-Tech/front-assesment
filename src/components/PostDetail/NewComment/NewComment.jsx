@@ -22,7 +22,7 @@ const NewComment = ({commentsInfo}) => {
         console.log(res);
         console.log(res.data);
       })
-    commentsInfo.changeCommentsList(commentData)
+      commentsInfo.changeCommentsList([...commentsInfo.commentsList,commentData])
       
   }
 
@@ -31,7 +31,7 @@ const NewComment = ({commentsInfo}) => {
     <form onSubmit={handleSubmit}>
       <p className="userName" id='comment'>@ChristianCiudad</p>
       <input type='text' className="commentInput" placeholder="Write a comment..." name='comment'></input>
-      <button className='postButton' type="submit" value="Submit">Post</button>
+      <input className='postButton' type="submit" value="Post"/>
     </form>
     </div>
   );

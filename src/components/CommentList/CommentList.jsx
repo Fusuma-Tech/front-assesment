@@ -10,9 +10,7 @@ const CommentList =({commentsList}) => {
 
   const paintComments = () =>{
 
-    if(commentsList){
-      return  commentsList.map((commentInfo,i)=><Comment key={i} commentInfo={commentInfo}/>)
-    }
+    return  commentsList.map((commentInfo,i)=><Comment key={i} commentInfo={commentInfo}/>)    
    }   
 
   return <div className="commentList">
