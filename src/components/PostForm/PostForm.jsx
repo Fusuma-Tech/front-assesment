@@ -13,8 +13,7 @@ const PostForm = (props) => {
 
   const handleSubmit = (e) =>{
     e.preventDefault();
-    const postData = {
-      "id": props.newPostInfo.postList.length + 1,
+    let postData = {
       "name": e.target.title.value,
       "user": "ChristianCiudad",
       "text": e.target.text.value
@@ -22,9 +21,14 @@ const PostForm = (props) => {
     axios.post(`http://localhost:3001/posts`, postData)
       .then(res => {
         console.log(res);
-        console.log(res.data);
+        const postDataState = {
+          "id" : res.data.id,
+          "name": e.target.title.value,
+          "user": "ChristianCiudad",
+          "text": e.target.text.value
+        }
+        props.newPostInfo.newPost(postDataState)
       })
-    props.newPostInfo.newPost(postData)
       navigate('/')
       
   }

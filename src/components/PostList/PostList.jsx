@@ -12,7 +12,7 @@ const PostList = (props) => {
   const paintPosts = () =>{
     if(props.postInfo){
 
-      return postList.map((postInfo,i)=><div><Link to={`/post/?id=${i+1}`}><Post postInfo={postInfo} delete={props.postInfo.deletePost} key={i}/></Link><button className='postButton' onClick={()=>props.postInfo.deletePost(i)}>Borrar</button></div>)
+      return postList.map((postInfo,i)=><div><Link to={`/post/?id=${postInfo.id}`}><Post postInfo={postInfo} key={postInfo.id}/></Link><button className='postButton' onClick={()=>props.postInfo.deletePost(i,postInfo.id)}>Borrar</button></div>)
     }
    }   
   return <div className="productList">

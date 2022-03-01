@@ -9,18 +9,14 @@ const NewComment = ({commentsInfo}) => {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    const commentsNumber = await getAllComments
-    console.log(commentsNumber.data)
     const commentData = {
-      "id": commentsNumber,
       "postId": commentsInfo.postId,
       "user": "ChristianCiudad",
       "text": e.target.comment.value
     }
     axios.post(`http://localhost:3001/comments`, commentData)
       .then(res => {
-        console.log(res);
-        console.log(res.data);
+        console.log("Comentario añadido correctamente!");
       })
       commentsInfo.changeCommentsList([...commentsInfo.commentsList,commentData])
       

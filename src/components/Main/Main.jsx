@@ -23,11 +23,18 @@ const Main = () => {
   const newPost = (postInfo) =>{
     changePostList([...postList,postInfo])
   }
-  const deletePost = (i) =>{
-    const post = postList.filter((post, j) => j !== i)
-    changePostList(post)
-    axios.delete(`http://localhost:3001/posts/${i+1}`)
-      .then(() => console.log({ status: 'Delete successful' }));
+  const deletePost = (iState, iDb) =>{
+    if (window.confirm('Are you sure you want delete this post?')) {
+      const post = postList.filter((post, j) => j !== iState)
+      changePostList(post)
+      axios.delete(`http://localhost:3001/posts/${iDb}`)
+        .then(() => console.log({ status: 'Delete successful' }));
+    } else {
+      // Do nothing!
+      console.log('Post was not deleted.');
+    }
+
+   
   }
   const newPostInfo = {
     newPost,
