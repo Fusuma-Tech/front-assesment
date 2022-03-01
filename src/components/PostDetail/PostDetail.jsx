@@ -42,12 +42,12 @@ const PostDetail = (props) => {
   {
     loading 
       ? <p>loading...</p> 
-      : <>
+      : <div className="noHover">
       <Link to="/"><button className='postButton' value="Submit">Home</button></Link>
       <Post postInfo={postDetail}/>
       <NewComment commentsInfo={commentsInfo}/>
       <CommentList commentsList={commentsList}/>
-      </>
+      </div>
   }
   </div>;
 };
