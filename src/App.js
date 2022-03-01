@@ -4,10 +4,12 @@ import "./App.css";
 import Comment from "./components/Comment";
 import { useEffect, useState } from "react";
 import callToApiPosts from "./services/posts";
+import callToApiComments from "./services/comments";
 
 function App() {
 
   const [posts, setPosts] = useState([]);
+  const [comments, setComments] = useState([]);
 
   // Llamamos a callToApiPosts
   useEffect(() => {
@@ -15,6 +17,21 @@ function App() {
       setPosts(response);
     })
   }, []);
+
+  // Llamamos a callToApiComments
+  useEffect(() => {
+    callToApiComments().then((response) => {
+      setComments(response);
+    })
+  }, []);
+
+  // Creamos el map para los post
+  const postsListHTML = posts.map((eachPost) => (
+    <li key={eachPost.id}>
+    <p>{eachPost.name}</p>
+    <p>{eachPost.user}</p>
+  </li>
+  ));
 
   return (
     <div className="App">
@@ -27,16 +44,10 @@ function App() {
         <section>
           <h1>Posts</h1>
           <ul>
-            { posts.map(eachPost =>
-              <li key={eachPost.id}>
-              <p>{eachPost.name}</p>
-              <p>{eachPost.user}</p>
-            </li>
-            ) }
-            
+            { postsListHTML }        
           </ul>
         </section>
-        <Comment />
+        <Comment comments={comments} />
       </body>
     </div>
   );
