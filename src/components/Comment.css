@@ -1,5 +1,6 @@
 .Comment-container {
   display: flex;
+  flex-direction: column;
   flex-flow: row nowrap;
   border-radius: 1rem;
   background-color: #aaccff;

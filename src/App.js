@@ -7,14 +7,14 @@ import callToApiPosts from "./services/posts";
 
 function App() {
 
-  const [posts, setPosts] = useState('');
+  const [posts, setPosts] = useState([]);
 
   // Llamamos a callToApiPosts
   useEffect(() => {
     callToApiPosts().then((response) => {
       setPosts(response);
     })
-  }, [])
+  }, []);
 
   return (
     <div className="App">
@@ -27,10 +27,13 @@ function App() {
         <section>
           <h1>Posts</h1>
           <ul>
-            <li>
-              <p>{posts.name}</p>
-              <p>{posts.user}</p>
+            { posts.map(eachPost =>
+              <li key={eachPost.id}>
+              <p>{eachPost.name}</p>
+              <p>{eachPost.user}</p>
             </li>
+            ) }
+            
           </ul>
         </section>
         <Comment />
