@@ -16,7 +16,6 @@ const PostDetail = (props) => {
   const [commentsList, changeCommentsList] = useState([]);
   const [loading, setLoading] = useState(true)
 
-   console.log(postDetail)
   const postId = searchParams.get('id')
   const commentsInfo={
     commentsList,
@@ -39,7 +38,6 @@ const PostDetail = (props) => {
     getCommentsDetail(postId)
   },[])
 
-  console.log(commentsList)
   return <div>
   {
     loading 

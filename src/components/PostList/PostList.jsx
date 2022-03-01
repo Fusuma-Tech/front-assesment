@@ -8,7 +8,6 @@ import Post from '../Post'
 const PostList = (props) => {
 
   const postList = props.postInfo.postList
-  console.log(postList)
 
   const paintPosts = () =>{
     if(props.postInfo){
