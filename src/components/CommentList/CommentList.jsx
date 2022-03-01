@@ -2,11 +2,8 @@ import React, {useState, useEffect} from "react";
 
 import Comment from "../Comment"
 
-import {getCommentByPostId} from '../../services/comments'
 
 const CommentList =({commentsList}) => {
-
-  console.log({commentsList})
 
   const paintComments = () =>{
 
