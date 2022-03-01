@@ -27,7 +27,7 @@ const NewComment = ({commentsInfo}) => {
     <form onSubmit={handleSubmit}>
       <p className="userName" id='comment'>@ChristianCiudad</p>
       <input type='text' className="commentInput" placeholder="Write a comment..." name='comment'></input>
-      <input className='postButton' type="submit" value="Post"/>
+      <input className='postButton' type="submit" value="Comment"/>
     </form>
     </div>
   );

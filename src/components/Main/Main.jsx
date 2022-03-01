@@ -8,6 +8,7 @@ import PostDetail from '../PostDetail/PostDetail'
 
 import {getAllPosts} from '../../services/posts.js'
 import axios from 'axios'
+import "./Main.css"
 
 
 const Main = () => {
