@@ -1,0 +1,15 @@
+.Comment-container {
+  width: inherit;
+  display: flex;
+  flex-flow: row nowrap;
+  border-bottom: 1px solid rgb(49, 49, 51);
+  padding: 1rem 1rem;
+  margin: 1rem;
+}
+
+.Comment-Content {
+  width: 60vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
