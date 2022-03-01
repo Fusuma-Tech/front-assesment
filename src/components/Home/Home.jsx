@@ -6,12 +6,11 @@ import PostList from '../PostList'
 import NewPost from '../NewPost'
 
 const Home = (props) => {
-  console.log(props)
   return (
     <main>
     <NewPost/>
     <div className="postList">
-    <PostList postInfo={props.postInfo.postList}/>
+    <PostList postInfo={props.postInfo}/>
     </div>
     </main>
   );

@@ -13,19 +13,12 @@
     font-family: 'Alegreya Sans', sans-serif;
 
 }
-.formTitle::placeholder{
+.formTitle::placeholder,.formText::placeholder{
 
     font-size: 18px;
     line-height: 31px;
     color: #CECECE;
 
-}
-.formText::placeholder{
-
-    font-size: 18px;
-    line-height: 31px;
-
-    color: #CECECE;
 }
 .formTitle{
     width: 572px;
