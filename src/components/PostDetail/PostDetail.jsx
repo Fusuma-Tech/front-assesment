@@ -3,7 +3,8 @@ import { Link, useSearchParams } from 'react-router-dom'
 
 import Post from "../Post/Post"
 import NewComment from "./NewComment/NewComment"
-import CommentList from "../CommentList/CommentList";
+import CommentList from "../CommentList/CommentList"
+import { getPostById } from "../../services/posts";
 import {getCommentByPostId} from "../../services/comments.js"
 import './PostDetail.css'
 
@@ -21,20 +22,21 @@ const PostDetail = (props) => {
     commentsList,
     changeCommentsList,
     postId
-
   }
 
   useEffect(()=>{
     const getPostDetail = async (id) => {
-      const data = await props.postInfo.postList[id-1]
-
+      const data = await getPostById(id)
       changePostDetail(data)
       setLoading(false)
     }
-    getCommentByPostId(postId).then(data=>{
+    const getCommentsDetail = async (id) => {
+      const data = await getCommentByPostId(id)
       changeCommentsList(data)
-    })
+
+    }
     getPostDetail(postId)
+    getCommentsDetail(postId)
   },[])
 
   console.log(commentsList)

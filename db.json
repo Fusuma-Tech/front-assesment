@@ -23,6 +23,18 @@
       "name": "Remembering old times",
       "user": "Fran",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est felis, rutrum in facilisis eget, facilisis non nunc. Nullam porta euismod odio, vitae feugiat odio elementum sodales. Maecenas eget egestas justo. In rhoncus lacinia dictum. Sed vel bibendum sapien. Etiam sed tincidunt augue. Sed volutpat in nibh vel luctus. Morbi varius, diam in bibendum porta, tellus lorem venenatis justo, eget aliquet nulla mi non nulla. "
+    },
+    {
+      "id": 5,
+      "name": "asdf",
+      "user": "ChristianCiudad",
+      "text": "asdf"
+    },
+    {
+      "id": 6,
+      "name": "asdf",
+      "user": "ChristianCiudad",
+      "text": "asdf"
     }
   ],
   "comments": [
@@ -43,6 +55,36 @@
       "postId": 2,
       "user": "AlejandroMartin",
       "text": "Nice post!"
+    },
+    {
+      "postId": "1",
+      "user": "ChristianCiudad",
+      "text": "Buena tio!",
+      "id": 4
+    },
+    {
+      "postId": "2",
+      "user": "ChristianCiudad",
+      "text": "Que bien salió eso!",
+      "id": 5
+    },
+    {
+      "postId": "5",
+      "user": "ChristianCiudad",
+      "text": "asdf",
+      "id": 6
+    },
+    {
+      "postId": "1",
+      "user": "ChristianCiudad",
+      "text": "d",
+      "id": 7
+    },
+    {
+      "postId": "6",
+      "user": "ChristianCiudad",
+      "text": "asdf",
+      "id": 8
     }
   ]
 }
