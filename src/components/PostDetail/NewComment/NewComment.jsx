@@ -9,10 +9,7 @@ const NewComment = ({commentsInfo}) => {
 
   const handleSubmit = async (e) =>{
     e.preventDefault();
-    const commentsNumber = await getAllComments
-    console.log(commentsNumber.data)
     const commentData = {
-      "id": commentsNumber,
       "postId": commentsInfo.postId,
       "user": "ChristianCiudad",
       "text": e.target.comment.value

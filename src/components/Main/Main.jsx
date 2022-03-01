@@ -23,10 +23,10 @@ const Main = () => {
   const newPost = (postInfo) =>{
     changePostList([...postList,postInfo])
   }
-  const deletePost = (i) =>{
-    const post = postList.filter((post, j) => j !== i)
+  const deletePost = (iState, iDb) =>{
+    const post = postList.filter((post, j) => j !== iState)
     changePostList(post)
-    axios.delete(`http://localhost:3001/posts/${i+1}`)
+    axios.delete(`http://localhost:3001/posts/${iDb}`)
       .then(() => console.log({ status: 'Delete successful' }));
   }
   const newPostInfo = {
