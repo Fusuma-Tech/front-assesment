@@ -1,7 +1,8 @@
 import logo from "./images/logo.png";
 import "./App.css";
 
-import Comment from "./components/Comment";
+
+import Post from "./components/Post";
 import { useEffect, useState } from "react";
 import callToApiPosts from "./services/posts";
 import callToApiComments from "./services/comments";
@@ -29,61 +30,21 @@ function App() {
     })
   }, []);
 
-  // Creamos el map para los post
-  const postsListHTML = posts.map((eachPost) => (
-    <li key={eachPost.id}>
-    <p>{eachPost.name}</p>
-    <p>{eachPost.user}</p>
-  </li>
-  ));
-
-  const handleChangeName = (ev) => {
-    setNewPost(
-      {
-        ...newPost,
-        name: ev.currentTarget.value
-      }
-    );
-  };
-
-  const handleChangeUser = (ev) => {
-    setNewPost(
-      {
-        ...newPost,
-        user: ev.currentTarget.value
-      }
-    );
-  };
-
-  const handleClickPost = () => {
-    setPosts([...posts, newPost]);
-  }
-
   return (
     <div className="App">
+
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <div>
         <h1>Post and comment</h1>
         </div>
       </header>
-      <body className="App-body">
-        <section>
-          <h1>Posts</h1>
-          <ul>
-            { postsListHTML }        
-          </ul>
-          <form className="form" onSubmit={(ev) => ev.preventDefault()}>
-            <label htmlFor="post__label">Name</label>
-            <input onChange={handleChangeName} value={newPost.name} type="text" id="form__input-post" />
 
-            <label htmlFor="post__label">User</label>
-            <input onChange={handleChangeUser} value={newPost.user} type="text" id="form__input-post" />
-            <button onClick={handleClickPost} type="submit">New post</button>
-          </form>
-        </section>
-        <Comment comments={comments} />
+      <body className="App-body">
+        <Post comments={comments} setPosts={setPosts} setNewPost={setNewPost} newPost={newPost} posts={posts} />
+        
       </body>
+
     </div>
   );
 }

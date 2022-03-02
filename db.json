@@ -6,10 +6,14 @@
       "user": "Fran"
     },
     {
-      "id": 2
+      "id": 2,
+      "name": "Best music band in history",
+      "user": "Marta"
     },
     {
-      "id": 3
+      "id": 3,
+      "name": "Interesting quotes from movies",
+      "user": "Ana"
     }
   ],
   "comments": [

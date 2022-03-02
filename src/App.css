@@ -3,6 +3,8 @@
 .App {
   text-align: center;
   height: 100vh;
+  padding: 20px;
+  background-color: #f0f0f0;
 }
 
 .App-logo {
@@ -17,7 +19,7 @@
 }
 
 .App-header {
-  background-color: #d9df89;
+  background-color: #e9e27d;
   height: 30vh;
   font-family: 'Chewy', cursive;
   text-transform: uppercase;
@@ -48,9 +50,42 @@
   background-color: #f0f0f0;
 }
 
+.postsTitle {
+  border-radius: 20px;
+  text-align: start;
+  text-transform: uppercase;
+  padding-left: 40px;
+  background-color: rgb(79, 167, 159);
+  color: white;
+  padding: 20px;
+}
+
+.ulPostStyles {
+  text-align: start;
+  list-style: none;
+}
+
 .form {
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.postName {
+  padding: 30px;
+  background-color: #ffffff;
+  border: 2px solid rgba(37, 71, 97, 0.199);
+  border-radius: 8px;
+  font-size: 20px;
+}
+
+.postUser {
+  padding: 15px;
+  background-color: rgba(37, 71, 97, 0.37);
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  font-size: 15px;
+  width: 5vw;
+  text-align: center;
 }

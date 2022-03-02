@@ -1,15 +1,26 @@
 .Comment-container {
   display: flex;
   flex-direction: column;
-  flex-flow: row nowrap;
+  text-align: start;
   border-radius: 1rem;
-  background-color: #aaccff;
-  padding: 2rem 1rem;
+  padding: 20px;
   margin: 1rem;
 }
+
+  .commentTitle {
+  width: 50vw;
+  text-align: start;
+  text-transform: uppercase;
+  border-bottom: 2px solid rgb(79, 167, 159);
+  padding: 10px;
+  }
 
 .Comment-name {
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 1rem;
+}
+
+.ulCommentStyles {
+  list-style: none;
 }

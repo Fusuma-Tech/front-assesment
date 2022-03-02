@@ -10,13 +10,24 @@ const Comment = (props) => {
   ));
 
   return (
+    <>
     <div className="Comment-container">
-      <div className="Comment-name">Name</div>
-      <div>User name</div>
-      <ul>
+      <h3 className="commentTitle">Comments</h3>
+      <ul className="ulCommentStyles">
         {commentsListHtml}
       </ul>
     </div>
+
+    <form className="form">
+        <label htmlFor="userComment">User</label>
+        <input id="userComment" type="text" />
+
+        <label htmlFor="textComment">Comment</label>
+        <input id="textComment" type="text" />
+
+        <button type="submit">Add new comment</button>
+    </form>
+    </>
   );
 };
 
