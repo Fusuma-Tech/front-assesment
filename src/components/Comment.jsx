@@ -1,4 +1,3 @@
-import callToApiComments from "../services/comments";
 import "./Comment.css";
 
 const Comment = (props) => {

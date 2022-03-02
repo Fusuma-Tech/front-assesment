@@ -1,4 +1,4 @@
-import logo from "./logo.svg";
+import logo from "./images/logo.png";
 import "./App.css";
 
 import Comment from "./components/Comment";
@@ -63,10 +63,11 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <p>Frontend Assesment - Fusuma</p>
+        <div>
+        <h1>Post and comment</h1>
+        </div>
       </header>
       <body className="App-body">
-        Hello there
         <section>
           <h1>Posts</h1>
           <ul>
