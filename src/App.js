@@ -10,6 +10,10 @@ function App() {
 
   const [posts, setPosts] = useState([]);
   const [comments, setComments] = useState([]);
+  const [newPost, setNewPost] = useState({
+    name: '',
+    user: ''
+  });
 
   // Llamamos a callToApiPosts
   useEffect(() => {
@@ -33,6 +37,28 @@ function App() {
   </li>
   ));
 
+  const handleChangeName = (ev) => {
+    setNewPost(
+      {
+        ...newPost,
+        name: ev.currentTarget.value
+      }
+    );
+  };
+
+  const handleChangeUser = (ev) => {
+    setNewPost(
+      {
+        ...newPost,
+        user: ev.currentTarget.value
+      }
+    );
+  };
+
+  const handleClickPost = () => {
+    setPosts([...posts, newPost]);
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -46,6 +72,14 @@ function App() {
           <ul>
             { postsListHTML }        
           </ul>
+          <form className="form" onSubmit={(ev) => ev.preventDefault()}>
+            <label htmlFor="post__label">Name</label>
+            <input onChange={handleChangeName} value={newPost.name} type="text" id="form__input-post" />
+
+            <label htmlFor="post__label">User</label>
+            <input onChange={handleChangeUser} value={newPost.user} type="text" id="form__input-post" />
+            <button onClick={handleClickPost} type="submit">New post</button>
+          </form>
         </section>
         <Comment comments={comments} />
       </body>
