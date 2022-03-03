@@ -1,3 +1,5 @@
+![post-and-comments](https://user-images.githubusercontent.com/93329410/156585547-63a20849-2c04-48d9-9b49-6c36d28bab75.jpg)
+
 # Frontend Assesment - Fusuma
 
 This repository is designed to evaluate developer basic skills using React.js
