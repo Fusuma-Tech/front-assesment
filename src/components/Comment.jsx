@@ -1,4 +1,4 @@
-import "./Comment.css";
+import "./Comment.scss";
 
 const Comment = (props) => {
   // Creamos el map para los comentarios

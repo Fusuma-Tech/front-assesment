@@ -1,5 +1,5 @@
 import logo from "./images/logo.png";
-import "./App.css";
+import "./App.scss";
 
 
 import Post from "./components/Post";

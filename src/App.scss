@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Chewy&display=swap');
+
+.App {
+  text-align: center;
+  padding: 20px;
+  background-color: #f0f0f0;
+}
+
+.App-logo {
+  height: 6rem;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 1.0s linear;
+  }
+}
+
+.App-header {
+  background-color: #e9e27d;
+  height: 30vh;
+  font-family: 'Chewy', cursive;
+  text-transform: uppercase;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  font-size: 25px;
+  color: rgb(0, 0, 0);
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(50deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+.App-body {
+  display: flex;
+  flex-flow: column nowrap;
+  background-color: #f0f0f0;
+}

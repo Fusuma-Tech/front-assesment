@@ -1,4 +1,5 @@
 import Comment from './Comment';
+import "./Post.scss";
 
 const Post = (props) => {
   // Creamos el map para los post
@@ -37,22 +38,22 @@ const Post = (props) => {
       <ul className="ulPostStyles">{postsListHTML}</ul>
 
       <form className="formNewPost" onSubmit={(ev) => ev.preventDefault()}>
-        <label htmlFor="post__label">Post name</label>
+        <label htmlFor="postLabelName">Post name</label>
         <input
           onChange={handleChangeName}
           className="newPostNameInput"
           value={props.newPost.name}
           type="text"
-          id="form__input-post"
+          id="postLabelName"
         />
 
-        <label htmlFor="post__label">User</label>
+        <label htmlFor="postLabelUser">User</label>
         <input
           onChange={handleChangeUser}
           className="newPostUserInput"
           value={props.newPost.user}
           type="text"
-          id="form__input-post"
+          id="postLabelUser"
         />
 
         <button className="buttonNewPost" onClick={handleClickPost} type="submit">
