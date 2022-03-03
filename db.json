@@ -4,6 +4,16 @@
       "id": 1,
       "name": "Good project ideas",
       "user": "Fran"
+    },
+    {
+      "id": 2,
+      "name": "Best music band in history",
+      "user": "Marta"
+    },
+    {
+      "id": 3,
+      "name": "Interesting quotes from movies",
+      "user": "Ana"
     }
   ],
   "comments": [
