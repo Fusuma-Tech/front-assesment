@@ -15,6 +15,18 @@
   padding: 10px;
   }
 
+  .userComment {
+    background-color: rgba(255, 255, 255, 0.411);
+    padding: 12px;
+    border-radius: 5px;
+  }
+
+  .userText {
+    border: rgba(0, 0, 0, 0.185) 2px solid;
+    background-color: white;
+    padding: 50px;
+  }
+
 .Comment-name {
   font-size: 1.5rem;
   font-weight: bold;
@@ -24,3 +36,20 @@
 .ulCommentStyles {
   list-style: none;
 }
+
+.commentLabel {
+  padding-bottom: 10px;
+  padding-top: 15px;
+}
+  .commentInputUser {
+    padding: 10px;
+    border: none;
+  }
+
+  .commentInputText {
+    width: 30vw;
+    height: 8vh;
+    border: none;
+    text-align: left;
+    top: 0;
+  }

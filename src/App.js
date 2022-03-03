@@ -15,6 +15,10 @@ function App() {
     name: '',
     user: ''
   });
+  const [newComment, setNewComment] = useState({
+    user: '',
+    text: ''
+  });
 
   // Llamamos a callToApiPosts
   useEffect(() => {
@@ -41,7 +45,7 @@ function App() {
       </header>
 
       <body className="App-body">
-        <Post comments={comments} setPosts={setPosts} setNewPost={setNewPost} newPost={newPost} posts={posts} />
+        <Post setComments={setComments} setNewComment={setNewComment} newComment={newComment} comments={comments} setPosts={setPosts} setNewPost={setNewPost} newPost={newPost} posts={posts} />
         
       </body>
 

@@ -8,7 +8,7 @@ const Post = (props) => {
       <p className="postName">{eachPost.name}</p>
       <p className="postUser">{eachPost.user}</p>
     </li>
-    <Comment comments={props.comments} />
+    <Comment setComments={props.setComments} setNewComment={props.setNewComment} newComment={props.newComment} comments={props.comments} />
     </>
   ));
 
@@ -36,10 +36,11 @@ const Post = (props) => {
 
       <ul className="ulPostStyles">{postsListHTML}</ul>
 
-      <form className="form" onSubmit={(ev) => ev.preventDefault()}>
-        <label htmlFor="post__label">Name</label>
+      <form className="formNewPost" onSubmit={(ev) => ev.preventDefault()}>
+        <label htmlFor="post__label">Post name</label>
         <input
           onChange={handleChangeName}
+          className="newPostNameInput"
           value={props.newPost.name}
           type="text"
           id="form__input-post"
@@ -48,12 +49,13 @@ const Post = (props) => {
         <label htmlFor="post__label">User</label>
         <input
           onChange={handleChangeUser}
+          className="newPostUserInput"
           value={props.newPost.user}
           type="text"
           id="form__input-post"
         />
 
-        <button onClick={handleClickPost} type="submit">
+        <button className="buttonNewPost" onClick={handleClickPost} type="submit">
           New post
         </button>
       </form>
