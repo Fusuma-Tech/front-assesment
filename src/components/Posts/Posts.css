@@ -1,0 +1,47 @@
+.Post-container {
+  display: flex;
+  justify-content: space-around;
+  border-radius: 1rem;
+  background-color: #aaccff;
+  padding: 2rem 1rem;
+  margin: 1rem;
+}
+
+.Post-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.Post-user {
+  font-size: 1.2rem;
+}
+
+.Post-link-button {
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+  list-style: none;
+  margin: auto;
+  margin-right: 40px;
+  color: black;
+}
+a:hover {
+  color: white;
+}
+
+.Posts-button {
+  width: 50px !important;
+  height: 30px;
+  margin-left: 50px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.Posts-button:hover {
+  background-color: #aaccff;
+}

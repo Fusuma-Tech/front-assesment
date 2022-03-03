@@ -1,23 +1,23 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "Good project ideas",
-      "user": "Fran"
+      "user": "Alex",
+      "name": "What is your favourite SO?",
+      "id": 1
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "postId": 1,
-      "user": "Fran",
-      "text": "Flying car"
+      "user": "alex",
+      "text": "Windows so far",
+      "postId": "1",
+      "id": 1
     },
     {
-      "id": 2,
-      "postId": 1,
-      "user": "Fran",
-      "text": "Magic Carpet"
+      "user": "Charls",
+      "text": "Mac for sure",
+      "postId": "1",
+      "id": 2
     }
   ]
 }

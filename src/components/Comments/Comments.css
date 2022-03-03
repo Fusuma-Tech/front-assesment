@@ -1,0 +1,38 @@
+.Comment-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-around;
+  border-radius: 1rem;
+  background-color: #aaccff;
+  padding: 2rem 1rem;
+  margin: 1rem;
+}
+
+.Comment-user {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-right: 1rem;
+  margin-right: 1rem;
+}
+
+.Comment-text {
+  margin: auto;
+}
+
+button {
+  width: 60px;
+}
+
+.Comments-button {
+  width: 50px !important;
+  height: 30px;
+  margin-left: 50px;
+  cursor: pointer;
+  border: 1px solid #fff;
+  border-radius: 10px;
+  margin: auto;
+}
+
+.Comments-button:hover {
+  background-color: #aaccff;
+}
