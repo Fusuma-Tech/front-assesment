@@ -1,23 +1,17 @@
 {
   "posts": [
     {
-      "id": 1,
-      "name": "Good project ideas",
-      "user": "Fran"
+      "user": "José",
+      "name": "Madrid o barsa?",
+      "id": 2
     }
   ],
   "comments": [
     {
-      "id": 1,
-      "postId": 1,
-      "user": "Fran",
-      "text": "Flying car"
-    },
-    {
-      "id": 2,
-      "postId": 1,
-      "user": "Fran",
-      "text": "Magic Carpet"
+      "user": "pepe",
+      "text": "Siempre madrid",
+      "postId": "2",
+      "id": 1
     }
   ]
 }
