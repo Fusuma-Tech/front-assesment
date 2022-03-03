@@ -1,23 +1,17 @@
 {
   "posts": [
     {
-      "user": "Alex",
-      "name": "What is your favourite SO?",
-      "id": 1
+      "user": "José",
+      "name": "Madrid o barsa?",
+      "id": 2
     }
   ],
   "comments": [
     {
-      "user": "alex",
-      "text": "Windows so far",
-      "postId": "1",
+      "user": "pepe",
+      "text": "Siempre madrid",
+      "postId": "2",
       "id": 1
-    },
-    {
-      "user": "Charls",
-      "text": "Mac for sure",
-      "postId": "1",
-      "id": 2
     }
   ]
 }
