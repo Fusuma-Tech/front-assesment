@@ -69,7 +69,7 @@ function PostDetail() {
   }, []);
   
   /*Este controlador va refrescando el textarea del form que se está rellenando*/
-  const handleChange = (newComment) => {
+  const handleChangeCommentField = (newComment) => {
 
     const { name, value } = newComment.target
     setState(state => {
@@ -86,7 +86,7 @@ function PostDetail() {
   }
 
   /*Añadimos el post al array de posts y seteamos el estado para que se actualice la cadena de posts.*/
-  const handleClick = () => {
+  const handleClickCommentButton = () => {
     console.log(state.newComment)
     const newCommentDone = state.newComment;
     setState(state => {
@@ -148,18 +148,18 @@ function PostDetail() {
               <label for="subject">Comment</label>
             </div>
             <div class="col-75">
-              <textarea id="subject" name="text" placeholder="comment..." value={newComment.text} onChange={handleChange} style={{ height: "200px" }}></textarea>
+              <textarea id="subject" name="text" placeholder="comment..." value={newComment.text} onChange={handleChangeCommentField} style={{ height: "200px" }}></textarea>
             </div>
             <div class="row">
               <div class="col-25">
                 <label for="fname">Your Name</label>
               </div>
               <div class="col-75">
-                <textarea name="signed" placeholder="signed..." value={newComment.signed} onChange={handleChange}></textarea>
+                <textarea name="signed" placeholder="signed..." value={newComment.signed} onChange={handleChangeCommentField}></textarea>
               </div>
             </div>
             <div class="col-75">
-              <button className="button" onClick={handleClick} value="Comentar">Comment</button>
+              <button className="button" onClick={handleClickCommentButton} value="Comentar">Comment</button>
             </div>
           </div>
           <br></br>

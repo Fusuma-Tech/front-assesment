@@ -26,9 +26,6 @@ function PostsList() {
     useEffect(() => {
         async function fetchPosts() {
             console.log('Fetching posts...');
-            setState(state => ({
-                ...state,
-            }))
             /*Función asíncrona que recupera los datos de los posts llamando al servicio services/posts*/
             let posts = await getAllPosts();
 
@@ -57,7 +54,7 @@ function PostsList() {
 
     }
     /*Este controlador va refrescando el textarea del form que se está rellenando*/
-    const handleChange = (newPost) => {
+    const handleChangePostField = (newPost) => {
 
         const { name, value } = newPost.target
         setState(state => {
@@ -73,7 +70,7 @@ function PostsList() {
     }
 
     /*Añadimos el post al array de posts y seteamos el estado para que se actualice la cadena de posts.*/
-    const handleClick = () => {
+    const handleClickPostButton = () => {
         const newPostDone = state.newPost;
         setState(state => {
 
@@ -109,12 +106,12 @@ function PostsList() {
                 <span className="input-group-text  bg-white border-warning text-warning"><i className="fa fa-edit fa-fw"></i></span>
                 <div className='row' >
                     <div className='col-75' style={{ paddingRight: "15px" }}>
-                        <textarea name="name" placeholder="post..." onChange={handleChange}></textarea>
+                        <textarea name="name" placeholder="post..." onChange={handleChangePostField}></textarea>
                     </div>
 
                     <div className='col-25'>
-                        <textarea name="user" placeholder="user..." onChange={handleChange}></textarea>
-                        <button className="button" onClick={handleClick} value="Comentar">Add post</button>
+                        <textarea name="user" placeholder="user..." onChange={handleChangePostField}></textarea>
+                        <button className="button" onClick={handleClickPostButton} value="Comentar">Add post</button>
 
                     </div>
                 </div>
