@@ -1,0 +1,105 @@
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: #e4cec0;
+    font-family: Aubrey;
+    padding-left: 15%;
+    padding-right: 15%;
+    padding-bottom: 15%;
+  }
+  
+  .column {
+    float: left;
+    width: 50%;
+    padding: 10px 10px;
+  }
+  
+  .row {margin: 0 -5px;}
+  
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+    border-top: 20px;
+    
+  }
+  
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    background-color: #a0bfc7;
+    border-radius:0.16em;
+
+
+    
+  }
+
+ button{
+    float:right;
+    padding:0.35em 1.2em;
+    border:0.1em solid #dab993;
+    margin:0 0.3em 0.3em 0;
+    border-radius:0.15em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    background-color: #dab993;
+    text-align:center;
+    transition: all 0.2s;
+    }
+    button:hover{
+    color:#000000;
+    background-color: #dbaf7d;
+    }
+
+
+
+  .title {
+    text-align: center;
+    font-size: 35px;
+    letter-spacing: 1px;
+    font-family: "Amatic SC"; 
+    font-style: normal; 
+    font-variant: normal; 
+    font-weight: 700; 
+    line-height: 26.4px; 
+    padding-top: 50px;
+  }
+  .paragraph {
+    text-align: left;
+    font-family: Aubrey;
+    font-size: 20px; 
+    font-style: normal;
+    font-variant: normal;
+    font-weight: 400; 
+    line-height: 20px;
+    padding: 50px;
+  }
+
+  .link {
+    background-color: #dab993;
+    color: black;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+  }
+  link:hover{
+    color:#000000;
+    background-color: #dbaf7d;
+    }
+  
