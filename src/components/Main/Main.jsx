@@ -28,7 +28,7 @@ const Main = () => {
     if (window.confirm('Are you sure you want delete this post?')) {
       const post = postList.filter((post, j) => j !== iState)
       changePostList(post)
-      axios.delete(`http://localhost:3001/posts/${iDb}`)
+      axios.delete(`/posts/${iDb}`)
         .then(() => console.log({ status: 'Delete successful' }));
     } else {
       // Do nothing!

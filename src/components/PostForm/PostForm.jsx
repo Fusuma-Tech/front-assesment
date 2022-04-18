@@ -18,7 +18,7 @@ const PostForm = (props) => {
       "user": "ChristianCiudad",
       "text": e.target.text.value
     }
-    axios.post(`http://localhost:3001/posts`, postData)
+    axios.post(`/posts`, postData)
       .then(res => {
         console.log(res);
         const postDataState = {
