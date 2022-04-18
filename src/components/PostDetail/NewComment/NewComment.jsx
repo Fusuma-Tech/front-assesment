@@ -13,7 +13,7 @@ const NewComment = ({commentsInfo}) => {
       "user": "ChristianCiudad",
       "text": e.target.comment.value
     }
-    axios.post(`http://localhost:3001/comments`, commentData)
+    axios.post(`'https://jsonplaceholder.typicode.com/comments`, commentData)
       .then(res => {
         console.log("Comentario añadido correctamente!");
       })
