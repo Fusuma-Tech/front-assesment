@@ -12,6 +12,7 @@ const PostList = (props) => {
   const paintPosts = () =>{
     if(props.postInfo){
 
+
       return postList.map((postInfo,i)=><div className="postList"><Link to={`/post/?id=${postInfo.id}`}><Post postInfo={postInfo} key={postInfo.id}/></Link><button className='postButton' onClick={()=>props.postInfo.deletePost(i,postInfo.id)}>Borrar</button></div>)
     }
    }   

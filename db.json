@@ -23,6 +23,18 @@
       "name": "Remembering old times",
       "user": "Fran",
       "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris est felis, rutrum in facilisis eget, facilisis non nunc. Nullam porta euismod odio, vitae feugiat odio elementum sodales. Maecenas eget egestas justo. In rhoncus lacinia dictum. Sed vel bibendum sapien. Etiam sed tincidunt augue. Sed volutpat in nibh vel luctus. Morbi varius, diam in bibendum porta, tellus lorem venenatis justo, eget aliquet nulla mi non nulla. "
+    },
+    {
+      "name": "Probando React",
+      "user": "ChristianCiudad",
+      "text": "Que bien funciona",
+      "id": 5
+    },
+    {
+      "name": "   hh",
+      "user": "ChristianCiudad",
+      "text": "hhh",
+      "id": 6
     }
   ],
   "comments": [
@@ -37,6 +49,12 @@
       "postId": 1,
       "user": "SaraLopez",
       "text": "Nice post!"
+    },
+    {
+      "postId": "1",
+      "user": "ChristianCiudad",
+      "text": "hhh",
+      "id": 2
     }
   ]
 }
