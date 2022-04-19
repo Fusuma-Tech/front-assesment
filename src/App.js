@@ -16,9 +16,9 @@ function App() {
         <p>Frontend Assesment - Fusuma</p>
       </header>
       <BrowserRouter>
-      <body className="App-body">
+      <div className="App-body">
         <Main />
-      </body>
+      </div>
       </BrowserRouter>
     </div>
   );
