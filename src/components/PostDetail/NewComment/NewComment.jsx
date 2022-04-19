@@ -10,8 +10,8 @@ const NewComment = ({commentsInfo}) => {
     e.preventDefault();
     const commentData = {
       "postId": commentsInfo.postId,
-      "user": "ChristianCiudad",
-      "text": e.target.comment.value
+      "name": "ChristianCiudad",
+      "body": e.target.comment.value
     }
     axios.post('https://jsonplaceholder.typicode.com/comments', commentData)
       .then(res => {

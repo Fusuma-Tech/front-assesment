@@ -18,14 +18,13 @@ const PostForm = (props) => {
       "user": "ChristianCiudad",
       "text": e.target.text.value
     }
-    axios.post(`/posts`, postData)
+    axios.post(`https://jsonplaceholder.typicode.com/posts`, postData)
       .then(res => {
         console.log(res);
         const postDataState = {
           "id" : res.data.id,
-          "name": e.target.title.value,
-          "user": "ChristianCiudad",
-          "text": e.target.text.value
+          "title": e.target.title.value,
+          "body": e.target.text.value
         }
         props.newPostInfo.newPost(postDataState)
       })

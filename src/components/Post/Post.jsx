@@ -8,9 +8,9 @@ const Post = (props) => {
 
   return (
     <div className="post">
-      <h3 className="postTitle">{infoPost.name.toUpperCase()}</h3>
-      <p className="userName">@{infoPost.user}</p>
-      <p className="postText"> {infoPost.text}</p>
+      <h3 className="postTitle">{infoPost.title.toUpperCase().slice(0,10)}</h3>
+      <p className="userName">@Prueba</p>
+      <p className="postText"> {infoPost.body}</p>
     </div>
   );
 };
