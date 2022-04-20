@@ -22,7 +22,7 @@ const Main = () => {
   },[])
 
   const newPost = (postInfo) =>{
-    changePostList([...postList,postInfo])
+    changePostList([postInfo,...postList])
   }
   const deletePost = (iState, iDb) =>{
     if (window.confirm('Are you sure you want delete this post?')) {

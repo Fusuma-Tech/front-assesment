@@ -13,7 +13,7 @@ const PostList = (props) => {
     if(props.postInfo){
 
 
-      return postList.map((postInfo,i)=><div className="postList" key={postInfo.id}><Link to={`/post/?id=${postInfo.id}`}><Post postInfo={postInfo} key={postInfo.id}/></Link><button className='postButton' onClick={()=>props.postInfo.deletePost(i,postInfo.id)}>Borrar</button></div>)
+      return postList.slice(0,5).map((postInfo,i)=><div className="postList" key={postInfo.id}><Link to={`/post/?id=${postInfo.id}`}><Post postInfo={postInfo} key={postInfo.id}/></Link><button className='postButton' onClick={()=>props.postInfo.deletePost(i,postInfo.id)}>Borrar</button></div>)
     }
    }   
   return <div className="productList">

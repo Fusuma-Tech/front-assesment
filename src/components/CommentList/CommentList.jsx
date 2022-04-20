@@ -7,7 +7,7 @@ const CommentList =({commentsList}) => {
 
   const paintComments = () =>{
 
-    return  commentsList.map((commentInfo,i)=><Comment key={i} commentInfo={commentInfo}/>)    
+    return  commentsList.slice(0,10).map((commentInfo,i)=><Comment key={i} commentInfo={commentInfo}/>)    
    }   
 
   return <div className="commentList">

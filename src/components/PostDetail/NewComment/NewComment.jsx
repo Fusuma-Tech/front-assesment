@@ -17,8 +17,8 @@ const NewComment = ({commentsInfo}) => {
       .then(res => {
         console.log("Comentario añadido correctamente!");
       })
-      commentsInfo.changeCommentsList([...commentsInfo.commentsList,commentData])
-      
+      commentsInfo.changeCommentsList([commentData, ...commentsInfo.commentsList])
+    e.target.comment.value = ''      
   }
 
   return (
