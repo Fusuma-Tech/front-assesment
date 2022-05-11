@@ -1,6 +1,7 @@
 .App {
   text-align: center;
-  height: 100vh;
+  height: 100%;
+  background-color: #f0f0f0;
 }
 
 .App-logo {
@@ -41,5 +42,4 @@
 .App-body {
   display: flex;
   flex-flow: column nowrap;
-  background-color: #f0f0f0;
 }
