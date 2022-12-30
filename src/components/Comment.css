@@ -1,6 +1,15 @@
+.Comment-link{
+  color: black;
+  text-decoration: none;
+}
+
 .Comment-container {
   display: flex;
-  flex-flow: row nowrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  /* flex-flow: row nowrap; */
+  gap: 5px;
   border-radius: 1rem;
   background-color: #aaccff;
   padding: 2rem 1rem;
@@ -11,4 +20,22 @@
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 1rem;
+}
+
+.newPostContainer{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.comment{
+  display: flex;
+  gap: 20px;
+}
+
+.buttonMainPage{
+  font-size: large;
+  width:fit-content;
+  align-self:center;
+  margin-top: 10px;
 }
