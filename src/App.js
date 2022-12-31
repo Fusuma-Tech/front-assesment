@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 
 import PostContextProvider from "./context/PostContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import PostDetails from "./components/PostDetails";
+import PostDetails from "./pages/PostDetails";
 
 function App() {
   return (

@@ -2,7 +2,7 @@ import logo from "../logo.svg";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { PostContext } from "../context/PostContext";
-import Button from "./Buttons";
+import Button from "../components/Buttons";
 
 function PostDetails() {
     const {postsData,commentsData,postShowed} = useContext(PostContext);
