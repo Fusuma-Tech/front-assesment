@@ -12,14 +12,18 @@ const Comment = () => {
       {postsData.map(post=>{
         return(
           <div key={post.id} className="Comment-container">
-            <button className="buttonMainPage" onClick={()=>{getPostShowed(post.id-1)}}><Link to={"/showPost"} className="Comment-link">See this post detailed</Link></button>
+            <Button buttonEffect="delete" thisPost={post}/>
+            <button className="buttonPostDatails" onClick={()=>{getPostShowed(post.id-1)}}>
+              <Link to={"/showPost"} className="Comment-link">
+                <i className="fa fa-info-circle" style={{fontSize:"50px"}}></i>
+              </Link>
+            </button>
             <div className="Comment-name">{post.name}</div>
             {commentsData.map((comment)=>{
               if (post.id === comment.postId) {
                 return(
                   <div key={comment.id} className="comment">
                     <div>{comment.text}</div>
-                    <Button buttonEffect="deleteComment" thisId={comment.id}/>
                   </div>
                 )
               }
@@ -27,8 +31,6 @@ const Comment = () => {
                 return null
               }
             })}
-          <Button buttonEffect="add" thisPost={post}/>
-          <Button buttonEffect="delete" thisPost={post}/>
           </div>
         )
       })}

@@ -2,8 +2,9 @@ import logo from "../logo.svg";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { PostContext } from "../context/PostContext";
+import Button from "./Buttons";
 
-function DetailsPost() {
+function PostDetails() {
     const {postsData,commentsData,postShowed} = useContext(PostContext);
     
     return(
@@ -22,6 +23,7 @@ function DetailsPost() {
                         return(
                         <div key={comment.id} className="comment">
                             <div>{comment.text}</div>
+                            <Button buttonEffect="deleteComment" thisId={comment.id}/>
                         </div>
                         )
                     }
@@ -29,10 +31,11 @@ function DetailsPost() {
                         return null
                     }
                     })}
+                <Button buttonEffect="add" thisPost={postsData[postShowed]}/>
                 </div>
             </main>
       </div>
     )
 }
 
-export default DetailsPost;
+export default PostDetails;

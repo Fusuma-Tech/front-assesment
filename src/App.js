@@ -3,7 +3,7 @@ import Home from "./pages/Home";
 
 import PostContextProvider from "./context/PostContext";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
-import DetailsPost from "./components/DetailsPost";
+import PostDetails from "./components/PostDetails";
 
 function App() {
   return (
@@ -11,7 +11,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/showPost" element={<DetailsPost />}/>
+          <Route path="/showPost" element={<PostDetails />}/>
         </Routes>
       </BrowserRouter>
     </PostContextProvider>

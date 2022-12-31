@@ -1,10 +1,12 @@
-import { useContext } from "react";
+import { useContext, useRef } from "react";
 import { PostContext } from "../context/PostContext";
 import { deleteThis, postNew } from "../services/comments";
 // import { deletePost, makeNewPost } from "../services/posts";
 
 function Button({buttonEffect,thisId,thisPost}) {
     const {postsData,commentsData,getNewComment} = useContext(PostContext);
+    const userRef = useRef();
+    const titleRef = useRef();
 
     function addComment() {
         const newCommentText = window.prompt("The text of your new comment");
@@ -21,8 +23,9 @@ function Button({buttonEffect,thisId,thisPost}) {
     }
     
     function createPost(e) {
-        const usuario = e.target.previousSibling.previousSibling.value;
-        const title = e.target.previousSibling.value;
+        e.preventDefault();
+        const usuario = userRef.current.value;
+        const title = titleRef.current.value;
 
         if (usuario !== "" && title !== "") {
             postNew("posts",{
@@ -31,8 +34,8 @@ function Button({buttonEffect,thisId,thisPost}) {
                 name: title,
             }).then(
                 getNewComment("newPost"),
-                e.target.previousSibling.previousSibling.value = "",
-                e.target.previousSibling.value = ""
+                userRef.value = "",
+                titleRef.value = ""
             )
         }
     }
@@ -51,17 +54,17 @@ function Button({buttonEffect,thisId,thisPost}) {
     return(
         <div>
             {buttonEffect === "add"?
-                <button onClick={addComment}>Add a new comment</button>
+                <button className="button" onClick={addComment}>Add a new comment</button>
             :buttonEffect === "create"?
-                <div className="newPostContainer">
-                    <input type={"text"} placeholder="Usuario"/>
-                    <input type={"text"} placeholder="Title"/>
-                    <button onClick={createPost}>Create a new post</button>
-                </div>
+                <form className="newPostContainer" onSubmit={createPost}>
+                    <input type={"text"} placeholder="Usuario" ref={userRef}/>
+                    <input type={"text"} placeholder="Title" ref={titleRef}/>
+                    <input type={"submit"} className="button" value={"Create a new post"} />
+                </form>
             :buttonEffect === "deleteComment"?
-                <button onClick={deleteThisComment}>Delete</button>
+                <button className="button erase-comment" onClick={deleteThisComment}>X</button>
             :
-                <button onClick={deleteThisPost}>Delete this post</button>
+                <button className="button erase-post" onClick={deleteThisPost}>X</button>
             }
         </div>
     )
