@@ -1,20 +1,20 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Home from "./pages/Home";
 
-import Comment from "./components/Comment";
+import PostContextProvider from "./context/PostContext";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import PostDetails from "./pages/PostDetails";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Frontend Assesment - Fusuma</p>
-      </header>
-      <body className="App-body">
-        Hello there
-        <Comment />
-      </body>
-    </div>
+    <PostContextProvider>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/showPost" element={<PostDetails />}/>
+        </Routes>
+      </BrowserRouter>
+    </PostContextProvider>
   );
 }
 
