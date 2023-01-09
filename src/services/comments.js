@@ -1,14 +1,18 @@
+
 // todo: create service methods for accesing posts
-const API_URL = "http://localhost:3000";
+
+import { API_URL, Comments } from "../configuration/const";
+
 export const getCommentById = async (id) => {
-  const response = await fetch(`${API_URL}/comments/${id}`);
+  const response = await fetch(`${API_URL}${Comments}/${id}`);
   const data = await response.json();
   return data;
 };
 
 export const getAllComments = async () => {
-  const response = await fetch(`${API_URL}/comments`);
+  const response = await fetch(`${API_URL}${Comments}`);
   const data = await response.json();
   return data;
 }
+
 

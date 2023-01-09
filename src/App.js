@@ -1,21 +1,15 @@
-import logo from "./logo.svg";
 import "./App.css";
+import Routes from "./components/Routes";
+import PostsContextProvider from "./context/PostsContext";
 
-import Comment from "./components/Comment";
 
-function App() {
+
+export default function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Frontend Assesment - Fusuma</p>
-      </header>
-      <body className="App-body">
-        Hello there
-        <Comment />
-      </body>
-    </div>
+    <PostsContextProvider>
+      <div className="App">
+          <Routes />
+      </div>
+    </PostsContextProvider>
   );
 }
-
-export default App;
