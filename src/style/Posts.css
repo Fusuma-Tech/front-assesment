@@ -1,4 +1,4 @@
-.Comment-container {
+.post-container {
   display: flex;
   flex-flow: row nowrap;
   border-radius: 1rem;
@@ -7,7 +7,7 @@
   margin: 1rem;
 }
 
-.Comment-name {
+.post-name {
   font-size: 1.5rem;
   font-weight: bold;
   margin-right: 1rem;

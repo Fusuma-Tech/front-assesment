@@ -1,12 +1,11 @@
-import "./Comment.css";
 
-const Comment = () => {
-  return (
-    <div className="Comment-container">
-      <div className="Comment-name">Name</div>
-      <div>User name</div>
-    </div>
-  );
-};
+export default function Comment({ comment }) {
+    return (
 
-export default Comment;
+        <div className="Comment-container">
+            <div className="Comment-name">{comment.user}</div>
+            <div>{comment.text}</div>
+
+        </div>
+   )
+}
